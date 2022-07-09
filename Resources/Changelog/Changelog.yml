@@ -1,23 +1,6 @@
 Entries:
 - author: Peptide90
   changes:
-  - {message: 'Split Station minor update. More signage, some wiring fixes, vehicle
-      spawners, memorial in the park and more chance of splitting! (See bar).', type: Add}
-  id: 1407
-  time: '2022-04-25T17:07:53.0000000+00:00'
-- author: Zumorica
-  changes:
-  - {message: The "suspicion" gamemode now works on every map., type: Tweak}
-  id: 1408
-  time: '2022-04-26T14:57:25.0000000+00:00'
-- author: Veritius
-  changes:
-  - {message: The Syndicate has distributed new segways for their agents to use.,
-    type: Add}
-  id: 1409
-  time: '2022-04-26T22:08:03.0000000+00:00'
-- author: Peptide90
-  changes:
   - {message: Fireaxes are now the perfect crowbar. They can now be used to pry up
       floor tiles., type: Tweak}
   id: 1410
@@ -2950,3 +2933,21 @@ Entries:
       docks., type: Fix}
   id: 1906
   time: '2022-07-09T05:20:23.0000000+00:00'
+- author: metalgearsloth
+  changes:
+  - {message: 'Jetpacks got some QOL tweaks. Particles don''t show if they''re stationary,
+      it gives popups when it turns off, and they''re unusable under gravity (as they
+      give no effect anyway).', type: Tweak}
+  id: 1907
+  time: '2022-07-09T08:24:49.0000000+00:00'
+- author: ElectroJr
+  changes:
+  - {message: Fixed a bug that would cause additional reagents to appear when failing
+      to drink something., type: Fix}
+  id: 1908
+  time: '2022-07-09T08:53:18.0000000+00:00'
+- author: mirrorcult
+  changes:
+  - {message: Many popups now vary in size and color., type: Add}
+  id: 1909
+  time: '2022-07-09T09:09:52.0000000+00:00'
