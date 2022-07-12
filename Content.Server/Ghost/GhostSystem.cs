@@ -54,11 +54,11 @@ namespace Content.Server.Ghost
             SubscribeNetworkEvent<GhostWarpToTargetRequestEvent>(OnGhostWarpToTargetRequest);
 
             SubscribeLocalEvent<GhostComponent, BooActionEvent>(OnActionPerform);
-            SubscribeLocalEvent<GhostComponent, RespawnActionEvent>(OnRespawnPreform);
+            SubscribeLocalEvent<GhostComponent, ResActionEvent>(OnRespawnPreform);
             SubscribeLocalEvent<GhostComponent, InsertIntoEntityStorageAttemptEvent>(OnEntityStorageInsertAttempt);
         }
 
-        private void OnRespawnPreform(EntityUid uid, GhostComponent component, RespawnActionEvent args)
+        private void OnRespawnPreform(EntityUid uid, GhostComponent component, ResActionEvent args)
         {
             if (args.Handled)
                 return;
@@ -69,6 +69,15 @@ namespace Content.Server.Ghost
                 {
                     var urist = EntityManager.SpawnEntity("MobHuman", spawn.Item2.MapPosition);
                     EntityManager.AddComponent<LoadoutComponent>(urist).Prototype = "PassengerGear";
+                    TryComp<MindComponent>(uid, out var mindcomp);
+                    if (mindcomp is not null)
+                    {
+                        if (mindcomp.Mind is not null)
+                        {
+                            mindcomp.Mind.TransferTo(component.Owner);
+                        }
+                    }
+
                     break;
                 }
             }
@@ -125,7 +134,8 @@ namespace Content.Server.Ghost
 
             component.TimeOfDeath = _gameTiming.RealTime;
 
-            _actions.AddAction(uid, component.Action, null);
+            _actions.AddAction(uid, component.BooAction, null);
+            _actions.AddAction(uid, component.ResAction, null);
         }
 
         private void OnGhostShutdown(EntityUid uid, GhostComponent component, ComponentShutdown args)
@@ -147,7 +157,7 @@ namespace Content.Server.Ghost
                     eye.VisibilityMask &= ~(uint) VisibilityFlags.Ghost;
                 }
 
-                _actions.RemoveAction(uid, component.Action);
+                _actions.RemoveAction(uid, component.BooAction);
             }
         }
 

@@ -36,11 +36,11 @@ namespace Content.Server.Ghost.Components
             Name = "action-name-respawn",
             Description = "action-description-respawn",
             CheckCanInteract = false,
-            Event = new RespawnActionEvent(),
+            Event = new ResActionEvent(),
         };
     }
 
     public sealed class BooActionEvent : InstantActionEvent { }
 
-    public sealed class RespawnActionEvent : InstantActionEvent { }
+    public sealed class ResActionEvent : InstantActionEvent { }
 }
