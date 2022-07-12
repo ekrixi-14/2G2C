@@ -69,12 +69,12 @@ namespace Content.Server.Ghost
                 {
                     var urist = EntityManager.SpawnEntity("MobHuman", spawn.Item2.MapPosition);
                     EntityManager.AddComponent<LoadoutComponent>(urist).Prototype = "PassengerGear";
-                    TryComp<MindComponent>(uid, out var mindcomp);
+                    TryComp<MindComponent>(component.Owner, out var mindcomp);
                     if (mindcomp is not null)
                     {
                         if (mindcomp.Mind is not null)
                         {
-                            mindcomp.Mind.TransferTo(component.Owner);
+                            mindcomp.Mind.TransferTo(urist);
                         }
                     }
 
