@@ -17,8 +17,8 @@ namespace Content.Server.Ghost.Components
         [DataField("booMaxTargets")]
         public int BooMaxTargets = 3;
 
-        [DataField("action")]
-        public InstantAction Action = new()
+        [DataField("booaction")]
+        public InstantAction BooAction = new()
         {
             UseDelay = TimeSpan.FromSeconds(120),
             Icon = new SpriteSpecifier.Texture(new ResourcePath("Interface/Actions/scream.png")),
@@ -27,7 +27,20 @@ namespace Content.Server.Ghost.Components
             CheckCanInteract = false,
             Event = new BooActionEvent(),
         };
+
+        [DataField("resaction")]
+        public InstantAction ResAction = new()
+        {
+            UseDelay = TimeSpan.FromSeconds(60),
+            Icon = new SpriteSpecifier.Texture(new ResourcePath("Interface/Actions/carp_summon.png")),
+            Name = "action-name-respawn",
+            Description = "action-description-respawn",
+            CheckCanInteract = false,
+            Event = new RespawnActionEvent(),
+        };
     }
 
     public sealed class BooActionEvent : InstantActionEvent { }
+
+    public sealed class RespawnActionEvent : InstantActionEvent { }
 }

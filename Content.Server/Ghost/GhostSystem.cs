@@ -1,9 +1,11 @@
 using System.Linq;
+using Content.Server.Clothing.Components;
 using Content.Server.GameTicking;
 using Content.Server.Ghost.Components;
 using Content.Server.Mind;
 using Content.Server.Mind.Components;
 using Content.Server.Players;
+using Content.Server.Spawners.Components;
 using Content.Server.Storage.Components;
 using Content.Server.Visible;
 using Content.Server.Warps;
@@ -52,8 +54,28 @@ namespace Content.Server.Ghost
             SubscribeNetworkEvent<GhostWarpToTargetRequestEvent>(OnGhostWarpToTargetRequest);
 
             SubscribeLocalEvent<GhostComponent, BooActionEvent>(OnActionPerform);
+            SubscribeLocalEvent<GhostComponent, RespawnActionEvent>(OnRespawnPreform);
             SubscribeLocalEvent<GhostComponent, InsertIntoEntityStorageAttemptEvent>(OnEntityStorageInsertAttempt);
         }
+
+        private void OnRespawnPreform(EntityUid uid, GhostComponent component, RespawnActionEvent args)
+        {
+            if (args.Handled)
+                return;
+            var latejoins = EntityManager.EntityQuery<SpawnPointComponent, TransformComponent>();
+            foreach (var spawn in latejoins)
+            {
+                if (spawn.Item1.SpawnType == SpawnPointType.LateJoin)
+                {
+                    var urist = EntityManager.SpawnEntity("MobHuman", spawn.Item2.MapPosition);
+                    EntityManager.AddComponent<LoadoutComponent>(urist).Prototype = "PassengerGear";
+                    break;
+                }
+            }
+
+            args.Handled = true;
+        }
+
         private void OnActionPerform(EntityUid uid, GhostComponent component, BooActionEvent args)
         {
             if (args.Handled)
