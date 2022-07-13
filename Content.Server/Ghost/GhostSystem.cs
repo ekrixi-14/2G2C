@@ -21,6 +21,7 @@ using Content.Shared.Species;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
+using Robust.Shared.Console;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -80,7 +81,7 @@ namespace Content.Server.Ghost
                     {
                         if (mindComp.Mind != null)
                         {
-                            var urist = EntityManager.SpawnEntity("MobHuman", spawn.Item2.MapPosition);
+                            var urist = EntityManager.SpawnEntity("MobBSRespawn", spawn.Item2.MapPosition);
 
                             EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Male.GetName("Human", _prototypeManager, _random);
                             mindComp.Mind.TransferTo(urist, true);
