@@ -32,7 +32,7 @@ namespace Content.Server.Ghost.Components
         public InstantAction ResAction = new()
         {
             UseDelay = TimeSpan.FromSeconds(60),
-            Icon = new SpriteSpecifier.Texture(new ResourcePath("Interface/Actions/carp_summon.png")),
+            Icon = new SpriteSpecifier.Texture(new ResourcePath("Interface/Actions/break_realspace.png")),
             Name = "action-name-respawn",
             Description = "action-description-respawn",
             CheckCanInteract = false,

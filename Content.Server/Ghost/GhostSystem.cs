@@ -1,3 +1,4 @@
+using System.Data;
 using System.Linq;
 using Content.Server.Clothing.Components;
 using Content.Server.GameTicking;
@@ -9,15 +10,19 @@ using Content.Server.Spawners.Components;
 using Content.Server.Storage.Components;
 using Content.Server.Visible;
 using Content.Server.Warps;
+using Content.Shared.CharacterAppearance;
 using Content.Shared.Actions;
 using Content.Shared.Examine;
 using Content.Shared.Follower;
 using Content.Shared.Ghost;
 using Content.Shared.MobState.Components;
 using Content.Shared.Movement.Events;
+using Content.Shared.Species;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
 namespace Content.Server.Ghost
@@ -27,12 +32,14 @@ namespace Content.Server.Ghost
     {
         [Dependency] private readonly IGameTiming _gameTiming = default!;
         [Dependency] private readonly IPlayerManager _playerManager = default!;
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly GameTicker _ticker = default!;
         [Dependency] private readonly MindSystem _mindSystem = default!;
         [Dependency] private readonly SharedActionsSystem _actions = default!;
         [Dependency] private readonly VisibilitySystem _visibilitySystem = default!;
         [Dependency] private readonly EntityLookupSystem _lookup = default!;
         [Dependency] private readonly FollowerSystem _followerSystem = default!;
+        [Dependency] private readonly IRobustRandom _random = default!;
 
         public override void Initialize()
         {
@@ -68,13 +75,14 @@ namespace Content.Server.Ghost
                 if (spawn.Item1.SpawnType == SpawnPointType.LateJoin)
                 {
                     var urist = EntityManager.SpawnEntity("MobHuman", spawn.Item2.MapPosition);
-                    EntityManager.AddComponent<LoadoutComponent>(urist).Prototype = "PassengerGear";
-                    TryComp<MindComponent>(component.Owner, out var mindcomp);
-                    if (mindcomp is not null)
+
+                    EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Male.GetName("Human", _prototypeManager, _random);
+                    TryComp<MindComponent>(component.Owner, out var mindComp);
+                    if (mindComp is not null)
                     {
-                        if (mindcomp.Mind is not null)
+                        if (mindComp.Mind is not null)
                         {
-                            mindcomp.Mind.TransferTo(urist);
+                            mindComp.Mind.TransferTo(urist);
                         }
                     }
 
