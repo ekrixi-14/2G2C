@@ -5,14 +5,13 @@
   description: A tape of duct tape for your makeshifting needs. It's sticky.
   components:
     - type: Sprite
-      sprite: 2G2C/Entities/Objects/Tools/tape.rsi
+      sprite: 2G2C/Objects/Materials/tape.rsi
       state: tape-30
     - type: Item
       size: 10
       HeldPrefix: tape
     - type: Stack
       stackType: Tape
-      count: 30
     - type: Appearance
       visuals:
         - type: StackVisualizer
@@ -27,7 +26,7 @@
   suffix: Full
   components:
     - type: Sprite
-      sprite: 2G2C/Entities/Objects/Tools/tape.rsi
+      sprite: 2G2C/Objects/Materials/tape.rsi
       state: tape-30
     - type: Stack
       count: 30
@@ -38,7 +37,7 @@
   suffix: 1
   components:
     - type: Sprite
-      sprite: 2G2C/Entities/Objects/Tools/tape.rsi
+      sprite: 2G2C/Objects/Materials/tape.rsi
       state: tape-10
     - type: Stack
       count: 1
