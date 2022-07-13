@@ -9,7 +9,7 @@
         - Spear
     - type: Sharp
     - type: Sprite
-      sprite: Objects/Weapons/Melee/spear.rsi
+      sprite: 2G2C/Objects/Weapons/Melee/rspear.rsi
       state: spear
     - type: MeleeWeapon
       damage:
@@ -24,7 +24,7 @@
           Piercing: 15
     - type: Clothing
       size: 40
-      sprite: Objects/Weapons/Melee/spear.rsi
+      sprite: 2G2C/Objects/Weapons/Melee/rspear.rsi
       quickEquip: false
       Slots:
         - back
@@ -77,4 +77,4 @@
     - type: DamageOnLand
       damage:
         types:
-          Blunt: 3.5
+          Blunt: 2.5
