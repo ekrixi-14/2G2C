@@ -67,6 +67,7 @@ namespace Content.Server.Ghost
 
         private void OnRespawnPreform(EntityUid uid, GhostComponent component, ResActionEvent args)
         {
+            // i love it when I'm working on a fork because that means i'm allowed to write shit like this
             if (args.Handled)
                 return;
             var latejoins = EntityManager.EntityQuery<SpawnPointComponent, TransformComponent>();
@@ -74,15 +75,15 @@ namespace Content.Server.Ghost
             {
                 if (spawn.Item1.SpawnType == SpawnPointType.LateJoin)
                 {
-                    var urist = EntityManager.SpawnEntity("MobHuman", spawn.Item2.MapPosition);
-
-                    EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Male.GetName("Human", _prototypeManager, _random);
-                    TryComp<MindComponent>(component.Owner, out var mindComp);
-                    if (mindComp is not null)
+                    TryComp<MindComponent>(uid, out var mindComp);
+                    if (mindComp != null)
                     {
-                        if (mindComp.Mind is not null)
+                        if (mindComp.Mind != null)
                         {
-                            mindComp.Mind.TransferTo(urist);
+                            var urist = EntityManager.SpawnEntity("MobHuman", spawn.Item2.MapPosition);
+
+                            EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Male.GetName("Human", _prototypeManager, _random);
+                            mindComp.Mind.TransferTo(urist, true);
                         }
                     }
 

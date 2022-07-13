@@ -14,7 +14,8 @@ namespace Content.Client.Ghost.UI
     {
         private readonly Button _returnToBody = new() {Text = Loc.GetString("ghost-gui-return-to-body-button") };
         private readonly Button _ghostWarp = new() {Text = Loc.GetString("ghost-gui-ghost-warp-button") };
-        private readonly Button _ghostRoles = new();
+        private readonly Button _respawn = new() {Text = Loc.GetString("ghost-gui-ghost-respawn-button") };
+        // private readonly Button _ghostRoles = new();
         private readonly GhostComponent _owner;
         private readonly GhostSystem _system;
 
@@ -42,7 +43,7 @@ namespace Content.Client.Ghost.UI
                 var msg = new GhostReturnToBodyRequest();
                 eventBus.SendSystemNetworkMessage(msg);
             };
-            _ghostRoles.OnPressed += _ => IoCManager.Resolve<IClientConsoleHost>()
+            _respawn.OnPressed += _ => IoCManager.Resolve<IClientConsoleHost>()
                 .RemoteExecuteCommand(null, "ghostroles");
 
             AddChild(new BoxContainer
@@ -52,7 +53,6 @@ namespace Content.Client.Ghost.UI
                 {
                     _returnToBody,
                     _ghostWarp,
-                    _ghostRoles,
                 }
             });
         }
@@ -60,15 +60,6 @@ namespace Content.Client.Ghost.UI
         public void Update()
         {
             _returnToBody.Disabled = !_owner.CanReturnToBody;
-            _ghostRoles.Text = Loc.GetString("ghost-gui-ghost-roles-button", ("count", _system.AvailableGhostRoleCount));
-            if (_system.AvailableGhostRoleCount != 0)
-            {
-                _ghostRoles.StyleClasses.Add(StyleBase.ButtonCaution);
-            }
-            else
-            {
-                _ghostRoles.StyleClasses.Remove(StyleBase.ButtonCaution);
-            }
             TargetWindow?.Populate();
         }
 

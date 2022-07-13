@@ -31,7 +31,7 @@ namespace Content.Server.Ghost.Components
         [DataField("resaction")]
         public InstantAction ResAction = new()
         {
-            UseDelay = TimeSpan.FromSeconds(60),
+            UseDelay = TimeSpan.FromSeconds(5),
             Icon = new SpriteSpecifier.Texture(new ResourcePath("Interface/Actions/break_realspace.png")),
             Name = "action-name-respawn",
             Description = "action-description-respawn",
