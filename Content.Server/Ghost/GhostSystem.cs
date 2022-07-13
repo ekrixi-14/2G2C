@@ -1,21 +1,29 @@
+using System.Data;
 using System.Linq;
+using Content.Server.Clothing.Components;
 using Content.Server.GameTicking;
 using Content.Server.Ghost.Components;
 using Content.Server.Mind;
 using Content.Server.Mind.Components;
 using Content.Server.Players;
+using Content.Server.Spawners.Components;
 using Content.Server.Storage.Components;
 using Content.Server.Visible;
 using Content.Server.Warps;
+using Content.Shared.CharacterAppearance;
 using Content.Shared.Actions;
 using Content.Shared.Examine;
 using Content.Shared.Follower;
 using Content.Shared.Ghost;
 using Content.Shared.MobState.Components;
 using Content.Shared.Movement.Events;
+using Content.Shared.Species;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
+using Robust.Shared.Console;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
 namespace Content.Server.Ghost
@@ -25,12 +33,14 @@ namespace Content.Server.Ghost
     {
         [Dependency] private readonly IGameTiming _gameTiming = default!;
         [Dependency] private readonly IPlayerManager _playerManager = default!;
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly GameTicker _ticker = default!;
         [Dependency] private readonly MindSystem _mindSystem = default!;
         [Dependency] private readonly SharedActionsSystem _actions = default!;
         [Dependency] private readonly VisibilitySystem _visibilitySystem = default!;
         [Dependency] private readonly EntityLookupSystem _lookup = default!;
         [Dependency] private readonly FollowerSystem _followerSystem = default!;
+        [Dependency] private readonly IRobustRandom _random = default!;
 
         public override void Initialize()
         {
@@ -52,8 +62,39 @@ namespace Content.Server.Ghost
             SubscribeNetworkEvent<GhostWarpToTargetRequestEvent>(OnGhostWarpToTargetRequest);
 
             SubscribeLocalEvent<GhostComponent, BooActionEvent>(OnActionPerform);
+            SubscribeLocalEvent<GhostComponent, ResActionEvent>(OnRespawnPreform);
             SubscribeLocalEvent<GhostComponent, InsertIntoEntityStorageAttemptEvent>(OnEntityStorageInsertAttempt);
         }
+
+        private void OnRespawnPreform(EntityUid uid, GhostComponent component, ResActionEvent args)
+        {
+            // i love it when I'm working on a fork because that means i'm allowed to write shit like this
+            if (args.Handled)
+                return;
+            var latejoins = EntityManager.EntityQuery<SpawnPointComponent, TransformComponent>();
+            foreach (var spawn in latejoins)
+            {
+                if (spawn.Item1.SpawnType == SpawnPointType.LateJoin)
+                {
+                    TryComp<VisitingMindComponent>(uid, out var mindComp);
+                    if (mindComp != null)
+                    {
+                        if (mindComp.Mind != null)
+                        {
+                            var urist = EntityManager.SpawnEntity("MobBSRespawn", spawn.Item2.MapPosition);
+
+                            EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Male.GetName("Human", _prototypeManager, _random);
+                            mindComp.Mind.TransferTo(urist, true);
+                        }
+                    }
+
+                    break;
+                }
+            }
+
+            args.Handled = true;
+        }
+
         private void OnActionPerform(EntityUid uid, GhostComponent component, BooActionEvent args)
         {
             if (args.Handled)
@@ -103,7 +144,8 @@ namespace Content.Server.Ghost
 
             component.TimeOfDeath = _gameTiming.RealTime;
 
-            _actions.AddAction(uid, component.Action, null);
+            _actions.AddAction(uid, component.BooAction, null);
+            _actions.AddAction(uid, component.ResAction, null);
         }
 
         private void OnGhostShutdown(EntityUid uid, GhostComponent component, ComponentShutdown args)
@@ -125,7 +167,7 @@ namespace Content.Server.Ghost
                     eye.VisibilityMask &= ~(uint) VisibilityFlags.Ghost;
                 }
 
-                _actions.RemoveAction(uid, component.Action);
+                _actions.RemoveAction(uid, component.BooAction);
             }
         }
 
