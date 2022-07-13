@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "license": "CC BY-SA 3.0",
+  "copyright": "Taken from tgstation and modified by SweptWasTaken & Just-a-Unity-Dev at commit https://github.com/tgstation/tgstation/commit/77608a9f46b06a46f0f6b1be061755f68cc255a3",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "tape-10"
+    },
+    {
+      "name": "tape-20"
+    },
+    {
+      "name": "tape-30"
+    },
+    {
+      "name": "tape-equipped-BELT",
+      "directions": 4
+    },
+    {
+        "name": "tape-inhand-right",
+        "directions": 4
+    },
+    {
+        "name": "tape-inhand-left",
+        "directions": 4
+    }
+  ]
+}
