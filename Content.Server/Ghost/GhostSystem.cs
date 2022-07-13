@@ -75,7 +75,7 @@ namespace Content.Server.Ghost
             {
                 if (spawn.Item1.SpawnType == SpawnPointType.LateJoin)
                 {
-                    TryComp<MindComponent>(uid, out var mindComp);
+                    TryComp<VisitingMindComponent>(uid, out var mindComp);
                     if (mindComp != null)
                     {
                         if (mindComp.Mind != null)
