@@ -21,9 +21,9 @@ SERVER_FILES = [
 
 VERSION = os.environ['GITHUB_SHA']
 FORK_ID = "2g2c"
-BUILD_URL = f"https://builds.eclips-e.space/{{FORK_ID}}/builds/{{FORK_VERSION}}/{FILE}"
-MANIFEST_URL = f"https://cdn.eclips-e.space/version/{{FORK_VERSION}}/manifest"
-MANIFEST_DOWNLOAD_URL = f"https://cdn.eclips-e.space/version/{{FORK_VERSION}}/download"
+BUILD_URL = f"https://builds.421034.xyz/{{FORK_ID}}/builds/{{FORK_VERSION}}/{FILE}"
+MANIFEST_URL = f"https://cdn.421034.xyz/version/{{FORK_VERSION}}/manifest"
+MANIFEST_DOWNLOAD_URL = f"https://cdn.421034.xyz/version/{{FORK_VERSION}}/download"
 
 def main() -> None:
     client_file = os.path.join("release", FILE)
