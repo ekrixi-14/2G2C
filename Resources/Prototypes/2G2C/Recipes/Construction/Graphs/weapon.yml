@@ -1,0 +1,10 @@
+﻿- type: construction
+  name: reinforced spear
+  id: ReinforcedSpear
+  graph: ReinforcedSpear
+  startNode: start
+  targetNode: rspear
+  category: Weapons
+  description: A reinforced spear for when you need to do more than put holes in somebody.
+  icon: Objects/Weapons/Melee/spear.rsi/spear.png
+  objectType: Item

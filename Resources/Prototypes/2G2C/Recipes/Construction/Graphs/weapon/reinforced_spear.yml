@@ -1,0 +1,22 @@
+﻿- type: constructionGraph
+  id: Spear
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: spear
+          steps:
+            - material: MetalRod
+              amount: 6
+              doAfter: 2
+            - material: Cable
+              amount: 8
+              doAfter: 1
+            - prototype: ShardGlassReinforced
+              name: Reinforced Glass Shard
+              icon:
+                sprite: Objects/Materials/Shards/shard.rsi
+                state: shard1
+              doAfter: 4
+    - node: rspear
+      entity: ReinforcedSpear
