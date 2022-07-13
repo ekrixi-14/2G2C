@@ -1,15 +1,15 @@
 ﻿- type: constructionGraph
-  id: Spear
+  id: ReinforcedSpear
   start: start
   graph:
     - node: start
       edges:
-        - to: spear
+        - to: rspear
           steps:
             - material: MetalRod
               amount: 6
               doAfter: 2
-            - material: Cable
+            - material: Tape
               amount: 8
               doAfter: 1
             - prototype: ShardGlassReinforced
