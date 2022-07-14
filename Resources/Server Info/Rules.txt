@@ -1,5 +1,5 @@
 
-lor=#ff0000]You must be 16 or older to play. Users under 16 will be banned
+[color=#ff0000]You must be 16 or older to play. Users under 16 will be banned
 immediately and be unbanned when they are old enough.[/color]
 
 [color=#a4885c]1.[/color] These are english servers. Do not speak other
