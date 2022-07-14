@@ -49220,6 +49220,60 @@ entities:
     type: Construction
   - isPlaceable: False
     type: PlaceableSurface
+- uid: 5447
+  type: CableHV
+  components:
+  - pos: -42.5,9.5
+    parent: 30
+    type: Transform
+- uid: 5448
+  type: CableHV
+  components:
+  - pos: -41.5,9.5
+    parent: 30
+    type: Transform
+- uid: 5449
+  type: CableHV
+  components:
+  - pos: -40.5,9.5
+    parent: 30
+    type: Transform
+- uid: 5450
+  type: CableHV
+  components:
+  - pos: -39.5,9.5
+    parent: 30
+    type: Transform
+- uid: 5451
+  type: CableHV
+  components:
+  - pos: -38.5,9.5
+    parent: 30
+    type: Transform
+- uid: 5452
+  type: CableHV
+  components:
+  - pos: -37.5,9.5
+    parent: 30
+    type: Transform
+- uid: 5453
+  type: CableHV
+  components:
+  - pos: -37.5,8.5
+    parent: 30
+    type: Transform
+- uid: 5454
+  type: CableHV
+  components:
+  - pos: -37.5,7.5
+    parent: 30
+    type: Transform
+- uid: 5455
+  type: CableHV
+  components:
+  - pos: -37.5,6.5
+    parent: 30
+    type: Transform
 - uid: 5470
   type: Catwalk
   components:

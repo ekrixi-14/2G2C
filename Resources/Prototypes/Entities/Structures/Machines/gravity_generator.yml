@@ -70,6 +70,10 @@
     # Gravity generator is a large machine, not casting shadows is fine within the radius set above.
     castShadows: false
     color: "#a8ffd9"
+  - type: PowerSupplier
+    supplyRate: 3000000
+    supplyRampRate: 5000
+    supplyRampTolerance: 5000
 
 - type: entity
   id: GravityGeneratorMini
@@ -104,3 +108,7 @@
     activePower: 500
     lightRadiusMin: 0.75
     lightRadiusMax: 2.5
+  - type: PowerSupplier
+    supplyRate: 3000000
+    supplyRampRate: 5000
+    supplyRampTolerance: 5000
