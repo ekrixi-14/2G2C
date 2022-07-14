@@ -1,4 +1,4 @@
-<p align="center"><img alt="Space Station 14" width="680" height="300" src="https://raw.githubusercontent.com/Spesships/2G2C/master/Resources/Textures/Logo/logo.png" /></p>
+<p align="center"> <img alt="Space Station 14" width="680" height="300" src="https://raw.githubusercontent.com/Spesships/2G2C/master/Resources/Textures/Logo/logo.png" /></p>
 
 2 Greys 2 Crowbar is an NRP "free for all" fork of SS14 that has a focus on makeshift crafting and greytiding.
 
