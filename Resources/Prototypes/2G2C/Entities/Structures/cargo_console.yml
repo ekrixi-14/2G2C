@@ -20,7 +20,7 @@
             - MachineMask
     - type: Sprite
       netsync: false
-      sprite: Structures/cargo_telepad.rsi
+      sprite: 2G2C/Structures/intercepter_telepad.rsi
       drawdepth: FloorObjects
       layers:
         - state: offline
