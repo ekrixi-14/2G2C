@@ -3,6 +3,7 @@
   mapName: 'Bagel Station'
   mapPath: /Maps/bagel.yml
   minPlayers: 30
+  votable: false
   stations:
     Bagel:
       mapNameTemplate: '{0} Bagel Station {1}'
