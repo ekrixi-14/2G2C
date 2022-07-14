@@ -80341,4 +80341,40 @@ entities:
     type: Transform
   - canCollide: False
     type: Physics
+- uid: 9540
+  type: CableHV
+  components:
+  - pos: 49.5,0.5
+    parent: 852
+    type: Transform
+- uid: 9541
+  type: CableHV
+  components:
+  - pos: 49.5,-0.5
+    parent: 852
+    type: Transform
+- uid: 9542
+  type: CableHV
+  components:
+  - pos: 49.5,-1.5
+    parent: 852
+    type: Transform
+- uid: 9543
+  type: CableHV
+  components:
+  - pos: 49.5,-2.5
+    parent: 852
+    type: Transform
+- uid: 9544
+  type: CableHV
+  components:
+  - pos: 49.5,-3.5
+    parent: 852
+    type: Transform
+- uid: 9545
+  type: CableHV
+  components:
+  - pos: 49.5,-4.5
+    parent: 852
+    type: Transform
 ...
