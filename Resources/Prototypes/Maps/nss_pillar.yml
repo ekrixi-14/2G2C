@@ -3,6 +3,7 @@
   mapName: 'NSS Pillar'
   mapPath: /Maps/nss_pillar.yml
   minPlayers: 40
+  votable: false
   stations:
     Pillar:
       mapNameTemplate: '{0} NSSPillar {1}'

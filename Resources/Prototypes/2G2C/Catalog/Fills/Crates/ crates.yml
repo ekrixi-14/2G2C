@@ -1,0 +1,24 @@
+﻿- type: entity
+  id: CrateSupply
+  suffix: Filled, Random
+  name: intercepted supply crate
+  description: An intercepted supply crate from a passing Nanotrasen cargo ship.
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: TapeStack
+          prob: 0.50
+          amount: 5
+        - id: SheetSteel
+          prob: 0.65
+          amount: 3
+        - id: SheetGlass
+          prob: 0.65
+          amount: 3
+        - id: ClothingBeltUtilityFilled
+          prob: 0.25
+          amount: 3
+        - id: ClothingHandsGlovesColorYellow
+          prob: 0.35
+          amount: 5

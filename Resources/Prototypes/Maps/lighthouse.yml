@@ -4,6 +4,7 @@
   mapPath: /Maps/lighthouse.yml
   minPlayers: 35
   maxPlayers: 70
+  votable: false
   stations:
     Lighthouse:
       mapNameTemplate: '{0} Lighthouse {1}'

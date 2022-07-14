@@ -3,6 +3,7 @@
   mapName: 'Split Station'
   mapPath: /Maps/splitstation.yml
   minPlayers: 50
+  votable: false
   stations:
     Split:
       mapNameTemplate: '{0} Split Station {1}'

@@ -1,0 +1,16 @@
+﻿- type: entity
+  name: Supply Crate Timed Spawner
+  id: SupplyTimedSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: blue
+        - texture: Structures/Storage/Crates/generic.rsi/crate.png
+    - type: TimedSpawner
+      prototypes:
+        - CrateSupply
+      chance: 1
+      intervalSeconds: 300
+      minimumEntitiesSpawned: 1
+      maximumEntitiesSpawned: 100000
