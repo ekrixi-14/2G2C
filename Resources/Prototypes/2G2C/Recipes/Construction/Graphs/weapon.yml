@@ -6,5 +6,5 @@
   targetNode: rspear
   category: Weapons
   description: A reinforced spear for when you need to do more than put holes in somebody.
-  icon: Objects/Weapons/Melee/spear.rsi/spear.png
+  icon: 2G2C/Objects/Weapons/Melee/rspear.rsi/spear.png
   objectType: Item
