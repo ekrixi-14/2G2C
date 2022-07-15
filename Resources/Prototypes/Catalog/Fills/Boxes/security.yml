@@ -82,7 +82,7 @@
     - type: StorageFill
       contents:
         - id: ShellShotgunBeanbag
-          amount: 6
+          amount: 15
     - type: Sprite
       layers:
         - state: boxwide
@@ -97,7 +97,7 @@
     - type: StorageFill
       contents:
         - id: ShellShotgun
-          amount: 6
+          amount: 15
     - type: Sprite
       layers:
         - state: boxwide
@@ -112,7 +112,7 @@
     - type: StorageFill
       contents:
         - id: ShellShotgunSlug
-          amount: 6
+          amount: 15
     - type: Sprite
       layers:
         - state: boxwide
@@ -127,7 +127,7 @@
     - type: StorageFill
       contents:
         - id: ShellShotgunFlare
-          amount: 6
+          amount: 15
     - type: Sprite
       layers:
         - state: boxwide
@@ -142,7 +142,7 @@
     - type: StorageFill
       contents:
         - id: ShellShotgunIncendiary
-          amount: 6
+          amount: 15
     - type: Sprite
       layers:
         - state: boxwide
