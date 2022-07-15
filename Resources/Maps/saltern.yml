@@ -80377,4 +80377,22 @@ entities:
   - pos: 49.5,-4.5
     parent: 852
     type: Transform
+- uid: 9546
+  type: GeneratorGreynium
+  components:
+  - pos: 49.5,-6.5
+    parent: 852
+    type: Transform
+- uid: 9547
+  type: CableHV
+  components:
+  - pos: 49.5,-6.5
+    parent: 852
+    type: Transform
+- uid: 9548
+  type: CableHV
+  components:
+  - pos: 49.5,-5.5
+    parent: 852
+    type: Transform
 ...

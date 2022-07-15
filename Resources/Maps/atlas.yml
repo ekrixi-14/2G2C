@@ -13215,6 +13215,8 @@ entities:
   - pos: -38.5,7.5
     parent: 30
     type: Transform
+  - opened: True
+    type: ItemCabinet
   - containers:
       ItemCabinet: !type:ContainerSlot {}
     type: ContainerContainer
@@ -49272,6 +49274,12 @@ entities:
   type: CableHV
   components:
   - pos: -37.5,6.5
+    parent: 30
+    type: Transform
+- uid: 5456
+  type: GeneratorGreynium
+  components:
+  - pos: -41.5,9.5
     parent: 30
     type: Transform
 - uid: 5470
