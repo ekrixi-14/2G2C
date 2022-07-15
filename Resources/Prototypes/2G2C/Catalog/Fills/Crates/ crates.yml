@@ -1,24 +1,127 @@
 ﻿- type: entity
-  id: CrateSupply
-  suffix: Filled, Random
+  id: InterceptedCrateSupply
+  suffix: Filled, Supply
   name: intercepted supply crate
-  description: An intercepted supply crate from a passing Nanotrasen cargo ship.
+  description: An intercepted supply crate from a passing-by cargo ship.
   parent: CrateGenericSteel
   components:
     - type: StorageFill
       contents:
         - id: TapeStack
-          prob: 0.50
-          amount: 5
+          prob: 0.20
+          amount: 1
         - id: SheetSteel
-          prob: 0.65
-          amount: 3
+          prob: 0.85
+          amount: 1
         - id: SheetGlass
           prob: 0.65
-          amount: 3
+          amount: 1
         - id: ClothingBeltUtilityFilled
           prob: 0.25
-          amount: 3
+          amount: 1
         - id: ClothingHandsGlovesColorYellow
           prob: 0.35
-          amount: 5
+          amount: 1
+        - id: SalvageHumanCorpse
+          prob: 0.25
+          amount: 1
+        - id: MobGiantSpider
+          prob: 0.1
+          amount: 3
+        - id: MobXenoDrone
+          prob: 0.1
+          amount: 1
+
+- type: entity
+  id: InterceptedCrateMedical
+  suffix: Filled, Medical
+  name: intercepted supply crate
+  description: An intercepted supply crate from a passing-by medical transport ship.
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: MedkitFilled
+          prob: 0.80
+          amount: 1
+        - id: MedkitBruteFilled
+          prob: 0.60
+          amount: 1
+        - id: MedkitToxinFilled
+          prob: 0.50
+          amount: 1
+        - id: MedkitRadiationFilled
+          prob: 0.50
+          amount: 1
+        - id: MedkitCombatFilled
+          prob: 0.50
+          amount: 1
+        - id: MedkitAdvancedFilled
+          prob: 0.25
+          amount: 1
+
+- type: entity
+  id: InterceptedCrateWeaponry
+  suffix: Filled, Weaponry
+  name: intercepted supply crate
+  description: An intercepted supply crate from a passing-by syndicate ship.
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: WeaponShotgunSawn
+          prob: 0.25
+        - id: WeaponShotgunKammerer
+          prob: 0.25
+        - id: WeaponShotgunDoubleBarreled
+          prob: 0.25
+        - id: WeaponRevolverInspector
+          prob: 0.25
+        - id: WeaponPistolHandmade
+          prob: 0.25
+        - id: WeaponPistolCobra
+          prob: 0.25
+        - id: WeaponSubMachineGunC20r
+          prob: 0.25
+        - id: WeaponSubMachineGunVector
+          prob: 0.25
+        - id: WeaponLaserGun
+          prob: 0.25
+        - id: BoxLethalshot
+          prob: 0.25
+        - id: BoxShotgunIncendiary
+          prob: 0.25
+        - id: SpeedLoaderMagnum
+          prob: 0.25
+        - id: CartridgePistol
+          prob: 0.25
+        - id: CartridgePistolHighVelocity
+          prob: 0.25
+        - id: CartridgePistolPractice
+          prob: 0.25
+        - id: MagazinePistolSubMachineGun
+          prob: 0.25
+        - id: MagazineMagnumSubMachineGun
+          prob: 0.25
+        - id: WeaponSubMachineGunVectorRubber
+          prob: 0.25
+
+- type: entity
+  id: InterceptedCrateSupply
+  suffix: Filled, Anomaly
+  name: intercepted supply crate
+  description: An intercepted supply crate from a passing-by cargo ship.
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: SalvageHumanCorpse
+          prob: 0.9
+          amount: 1
+        - id: MobGiantSpider
+          prob: 0.95
+          amount: 3
+        - id: MobXenoDrone
+          prob: 0.65
+          amount: 1
+
