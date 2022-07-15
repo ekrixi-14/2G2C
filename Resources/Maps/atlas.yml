@@ -13215,6 +13215,8 @@ entities:
   - pos: -38.5,7.5
     parent: 30
     type: Transform
+  - opened: True
+    type: ItemCabinet
   - containers:
       ItemCabinet: !type:ContainerSlot {}
     type: ContainerContainer
@@ -49155,7 +49157,7 @@ entities:
   - canCollide: False
     type: Physics
 - uid: 5441
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: -17.5,14.5
     parent: 30
@@ -49166,7 +49168,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 5442
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: -18.5,16.5
     parent: 30
@@ -49177,7 +49179,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 5443
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: -4.5,5.5
     parent: 30
@@ -49188,7 +49190,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 5444
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: 6.5,20.5
     parent: 30
@@ -49199,7 +49201,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 5445
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: -2.5,17.5
     parent: 30
@@ -49210,7 +49212,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 5446
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: 28.5,-10.5
     parent: 30
@@ -49272,6 +49274,12 @@ entities:
   type: CableHV
   components:
   - pos: -37.5,6.5
+    parent: 30
+    type: Transform
+- uid: 5456
+  type: GeneratorGreynium
+  components:
+  - pos: -41.5,9.5
     parent: 30
     type: Transform
 - uid: 5470

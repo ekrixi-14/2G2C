@@ -80125,7 +80125,7 @@ entities:
   - canCollide: False
     type: Physics
 - uid: 9517
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: -38.5,3.5
     parent: 852
@@ -80136,7 +80136,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 9518
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: -37.5,3.5
     parent: 852
@@ -80147,7 +80147,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 9519
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: -37.5,2.5
     parent: 852
@@ -80158,7 +80158,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 9520
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: -38.5,2.5
     parent: 852
@@ -80169,7 +80169,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 9521
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: -6.5,11.5
     parent: 852
@@ -80180,7 +80180,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 9522
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: -5.5,11.5
     parent: 852
@@ -80207,7 +80207,7 @@ entities:
   - canCollide: False
     type: Physics
 - uid: 9525
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: 21.5,11.5
     parent: 852
@@ -80290,7 +80290,7 @@ entities:
   - canCollide: False
     type: Physics
 - uid: 9535
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: 2.5,4.5
     parent: 852
@@ -80301,7 +80301,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 9536
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: 4.5,3.5
     parent: 852
@@ -80312,7 +80312,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 9537
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: 4.5,3.5
     parent: 852
@@ -80323,7 +80323,7 @@ entities:
   - isPlaceable: False
     type: PlaceableSurface
 - uid: 9538
-  type: CrateSupply
+  type: InterceptedCrateSupply
   components:
   - pos: 4.5,5.5
     parent: 852
@@ -80375,6 +80375,24 @@ entities:
   type: CableHV
   components:
   - pos: 49.5,-4.5
+    parent: 852
+    type: Transform
+- uid: 9546
+  type: GeneratorGreynium
+  components:
+  - pos: 49.5,-6.5
+    parent: 852
+    type: Transform
+- uid: 9547
+  type: CableHV
+  components:
+  - pos: 49.5,-6.5
+    parent: 852
+    type: Transform
+- uid: 9548
+  type: CableHV
+  components:
+  - pos: 49.5,-5.5
     parent: 852
     type: Transform
 ...

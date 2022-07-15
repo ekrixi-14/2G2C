@@ -1,0 +1,24 @@
+﻿- type: entity
+  parent: BaseGenerator
+  id: GeneratorGreynium
+  suffix: Greynium, 15kW
+  components:
+    - type: PowerSupplier
+      maxSupply: 1500000000
+      supplyRate: 500000
+      supplyRampTolerance: 500000
+    - type: Sprite
+      sprite: Structures/Power/Generation/portable_generator.rsi
+      state: portgen1_1
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 999999999
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/Effects/metalbreak.ogg
+            - !type:ExplodeBehavior

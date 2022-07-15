@@ -2,7 +2,7 @@
   id: SupplyIntercepterTelepad
   parent: BaseStructureDynamic
   name: supply intercepter telepad
-  description: An extremely modified version of the cargo telepad. Passively steals cargo from passing-by Nanotrasen transport ships.
+  description: An extremely modified version of the cargo telepad. Passively steals cargo from passing-by Nanotrasen or regular transport ships.
   components:
     - type: InteractionOutline
     - type: Physics
@@ -21,7 +21,6 @@
     - type: Sprite
       netsync: false
       sprite: 2G2C/Structures/intercepter_telepad.rsi
-      drawdepth: FloorObjects
       layers:
         - state: offline
           map: [ "enum.CargoTelepadLayers.Base" ]
@@ -32,8 +31,18 @@
     - type: CollideOnAnchor
     - type: TimedSpawner
       prototypes:
-        - CrateSupply
+        # repeated for more chances
+        - InterceptedCrateSupply
+        - InterceptedCrateSupply
+        - InterceptedCrateSupply
+        - InterceptedCrateSupply
+        - InterceptedCrateMedical
+        - InterceptedCrateMedical
+        - InterceptedCrateMedical
+        - InterceptedCrateWeaponry
+        - InterceptedCrateWeaponry
+        - InterceptedCrateAnomaly
       chance: 1
       intervalSeconds: 300
       minimumEntitiesSpawned: 1
-      maximumEntitiesSpawned: 100000
+      maximumEntitiesSpawned: 25

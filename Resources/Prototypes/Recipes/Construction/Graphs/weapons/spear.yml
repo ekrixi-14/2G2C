@@ -6,7 +6,7 @@
       edges:
         - to: spear
           steps:
-            - material: MetalRod
+            - material: Tape
               amount: 2
               doAfter: 2
             - material: Cable
@@ -14,7 +14,7 @@
               doAfter: 1
             - prototype: ShardGlass
               name: Glass Shard
-              icon: 
+              icon:
                 sprite: Objects/Materials/Shards/shard.rsi
                 state: shard1
               doAfter: 1
