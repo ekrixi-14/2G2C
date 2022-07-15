@@ -21,7 +21,6 @@
     - type: Sprite
       netsync: false
       sprite: 2G2C/Structures/intercepter_telepad.rsi
-      drawdepth: FloorObjects
       layers:
         - state: offline
           map: [ "enum.CargoTelepadLayers.Base" ]
