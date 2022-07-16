@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using Content.Server.Cuffs.Components;
 using Content.Server.Hands.Components;
 using Content.Server.Pulling;
 using Content.Shared.ActionBlocker;
@@ -268,6 +269,18 @@ namespace Content.Server.Buckle.Components
                 if (EntMan.TryGetComponent<VehicleComponent>(oldBuckledTo.Owner, out var vehicle) &&
                         vehicle.Rider != user)
                     return false;
+
+                if (EntMan.HasComponent<CuffableComponent>(Owner))
+                {
+                    EntMan.TryGetComponent<CuffableComponent>(Owner, out var mobCuffable);
+                    if (mobCuffable != null)
+                    {
+                        if (mobCuffable.CanStillInteract == false)
+                        {
+                            return false;
+                        }
+                    }
+                }
             }
 
             BuckledTo = null;
