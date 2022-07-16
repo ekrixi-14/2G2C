@@ -1,6 +1,7 @@
 ﻿- type: entity
   parent: BaseItem
   id: BaseTape
+  abstract: true
   name: duct tape
   description: A tape of duct tape for your makeshifting needs. It's sticky.
   components:
@@ -41,3 +42,12 @@
       state: tape-10
     - type: Stack
       count: 1
+    - type: Tag
+      tags:
+        - Handcuffs
+    - type: Clothing
+      sprite: Clothing/Mask/muzzle.rsi
+    - type: IngestionBlocker
+    - type: AddAccentClothing
+      accent: ReplacementAccent
+      replacement: mumble
