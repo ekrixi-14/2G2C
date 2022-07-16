@@ -27,6 +27,14 @@
     {
         "name": "tape-inhand-left",
         "directions": 4
+    },
+    {
+        "name": "tape-equipped-EYES",
+        "directions": 4
+    },
+    {
+        "name": "tape-equipped-MASK",
+        "directions": 4
     }
   ]
 }

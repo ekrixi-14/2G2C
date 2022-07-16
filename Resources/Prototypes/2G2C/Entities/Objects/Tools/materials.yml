@@ -9,10 +9,11 @@
       sprite: 2G2C/Objects/Materials/tape.rsi
     - type: Clothing
       HeldPrefix: tape
-      Slots: [ mask ]
+      Slots: [ mask, eyes ]
       sprite: 2G2C/Objects/Materials/tape.rsi
       state: tape-30
       size: 10
+    - type: Blindfold
     - type: IngestionBlocker
     - type: AddAccentClothing
       accent: ReplacementAccent
