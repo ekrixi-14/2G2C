@@ -107,7 +107,7 @@
           prob: 0.25
 
 - type: entity
-  id: InterceptedCrateSupply
+  id: InterceptedCrateAnomaly
   suffix: Filled, Anomaly
   name: intercepted supply crate
   description: An intercepted supply crate from a passing-by cargo ship.
