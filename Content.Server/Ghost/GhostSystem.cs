@@ -1,5 +1,6 @@
 using System.Data;
 using System.Linq;
+using Content.Server.Administration.Commands;
 using Content.Server.Clothing.Components;
 using Content.Server.GameTicking;
 using Content.Server.Ghost.Components;
@@ -54,7 +55,7 @@ namespace Content.Server.Ghost
             SubscribeLocalEvent<GhostComponent, MindRemovedMessage>(OnMindRemovedMessage);
             SubscribeLocalEvent<GhostComponent, MindUnvisitedMessage>(OnMindUnvisitedMessage);
 
-            SubscribeLocalEvent<GhostOnMoveComponent, RelayMoveInputEvent>(OnRelayMoveInput);
+            SubscribeLocalEvent<GhostOnMoveComponent, MoveInputEvent>(OnRelayMoveInput);
 
             SubscribeNetworkEvent<GhostWarpsRequestEvent>(OnGhostWarpsRequest);
             SubscribeNetworkEvent<GhostReturnToBodyRequest>(OnGhostReturnToBodyRequest);
@@ -71,6 +72,8 @@ namespace Content.Server.Ghost
             // i love it when I'm working on a fork because that means i'm allowed to write shit like this
             if (args.Handled)
                 return;
+
+            var timeSinceDeath = _gameTiming.RealTime.Subtract(component.TimeOfDeath);
             var latejoins = EntityManager.EntityQuery<SpawnPointComponent, TransformComponent>();
             foreach (var spawn in latejoins)
             {
@@ -81,10 +84,12 @@ namespace Content.Server.Ghost
                     {
                         if (mindComp.Mind != null)
                         {
+                            if (timeSinceDeath.Minutes >= 5) {}
                             var urist = EntityManager.SpawnEntity("MobBSRespawn", spawn.Item2.MapPosition);
 
                             EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Male.GetName("Human", _prototypeManager, _random);
                             mindComp.Mind.TransferTo(urist, true);
+                            RejuvenateCommand.PerformRejuvenate(urist);
                         }
                     }
 
@@ -118,7 +123,7 @@ namespace Content.Server.Ghost
             args.Handled = true;
         }
 
-        private void OnRelayMoveInput(EntityUid uid, GhostOnMoveComponent component, RelayMoveInputEvent args)
+        private void OnRelayMoveInput(EntityUid uid, GhostOnMoveComponent component, ref MoveInputEvent args)
         {
             // Let's not ghost if our mind is visiting...
             if (EntityManager.HasComponent<VisitingMindComponent>(uid)) return;

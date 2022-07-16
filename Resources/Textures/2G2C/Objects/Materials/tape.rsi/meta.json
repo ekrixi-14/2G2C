@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC BY-SA 3.0",
-  "copyright": "Taken from tgstation and modified by SweptWasTaken & Just-a-Unity-Dev at commit https://github.com/tgstation/tgstation/commit/77608a9f46b06a46f0f6b1be061755f68cc255a3",
+  "copyright": "Taken from tgstation and modified by Just-a-Unity-Dev at commit https://github.com/tgstation/tgstation/blob/5cbe2ffc3100a3db477d70cb1f030102a0cdc13c/icons/obj/tapes.dmi",
   "size": {
     "x": 32,
     "y": 32
@@ -26,6 +26,14 @@
     },
     {
         "name": "tape-inhand-left",
+        "directions": 4
+    },
+    {
+        "name": "tape-equipped-EYES",
+        "directions": 4
+    },
+    {
+        "name": "tape-equipped-MASK",
         "directions": 4
     }
   ]
