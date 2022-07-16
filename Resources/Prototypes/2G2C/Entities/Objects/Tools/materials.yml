@@ -25,7 +25,7 @@
       stackType: Tape
     - type: Handcuff
       breakoutTime: 15
-      cuffedRSI: Objects/Misc/cablecuffs.rsi
+      cuffedRSI: Objects/Misc/zipties.rsi
       bodyIconState: body-overlay
       color: red
       startCuffSound:
