@@ -7,12 +7,36 @@
   components:
     - type: Sprite
       sprite: 2G2C/Objects/Materials/tape.rsi
-      state: tape-30
-    - type: Item
-      size: 10
+    - type: Clothing
       HeldPrefix: tape
+      Slots: [ mask ]
+      sprite: 2G2C/Objects/Materials/tape.rsi
+      state: tape-30
+      size: 10
+    - type: IngestionBlocker
+    - type: AddAccentClothing
+      accent: ReplacementAccent
+      replacement: mumble
+#    - type: Item
+#      size: 10
+#      HeldPrefix: tape
     - type: Stack
       stackType: Tape
+    - type: Handcuff
+      breakoutTime: 15
+      cuffedRSI: Objects/Misc/cablecuffs.rsi
+      bodyIconState: body-overlay
+      color: red
+      startCuffSound:
+        path: /Audio/Items/Handcuffs/rope_start.ogg
+      endCuffSound:
+        path: /Audio/Items/Handcuffs/rope_end.ogg
+      startUncuffSound:
+        path: /Audio/Items/Handcuffs/rope_start.ogg
+      endUncuffSound:
+        path: /Audio/Items/Handcuffs/rope_breakout.ogg
+      startBreakoutSound:
+        path: /Audio/Items/Handcuffs/rope_takeoff.ogg
     - type: Appearance
       visuals:
         - type: StackVisualizer
@@ -20,6 +44,9 @@
             - tape-10
             - tape-20
             - tape-30
+    - type: Tag
+      tags:
+        - Handcuffs
 
 - type: entity
   parent: BaseTape
@@ -42,12 +69,3 @@
       state: tape-10
     - type: Stack
       count: 1
-    - type: Tag
-      tags:
-        - Handcuffs
-    - type: Clothing
-      sprite: Clothing/Mask/muzzle.rsi
-    - type: IngestionBlocker
-    - type: AddAccentClothing
-      accent: ReplacementAccent
-      replacement: mumble
