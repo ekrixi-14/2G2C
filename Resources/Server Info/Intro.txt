@@ -1,8 +1,29 @@
-Welcome to Space Station 14! You have just started your shift aboard a Nanotrasen space station and along with your crewmates should cooperate, perform your job role to the best of your ability and have fun (not at the expense of others hopefully).
+Welcome to 2 Greys 2 Crowbars! The chaotic NRP deathmatch server!
 
-Please make sure you understand the server rules (F1) and if you have any questions, consult this guide, your colleagues on shift in person or over radio or via discord. You can also ask admins for help (ahelp) by hitting the escape key > admin help and typing a message to any online admins. Especially do this if you witness someone breaking rules.
+There is no objective, but one I may want to give is to survive!
+You are able to survive in many ways, such as:
+    - Building a base
+    - Teaming up with others
+    - Defending yourself
 
-To reiterate, you are all a crew of people who work together (even the clown) and you should not be harming each other unless you have an extremely good reason (self defence) and even then, call security over radio, stun and detain, do not commit murder as a non antagonist (see antagonist further down).
+There are supply intercepter telepads scattered across the map, they will passively collect crates from flying-by cargo ships!
+There are 4 types of crates you can get from these.
+1. Supply crates
+The first, most common and regular supply crate. Has a chance to come with materials or ancient dangers.
+One rare material you can obtain from this is duct tape!
 
+2. Medical crates
+Someone is bleeding in a hospital, and you just stole their only chance at surviving. Cruel!
+Every medkit has a chance to spawn in this crate, and there are no ancient dangers!
 
-Instead of intents, we have combat mode. Check controls below for its keybind. You can't attack anybody with it off, so no more hitting yourself with your own crowbar.
+3. Weaponry crates
+Looks like you stole the nuke-ops weaponry order!
+This crate has a chance to come with guns, shells, magazines and other things that can help you in combat!
+
+4. Anomaly crates
+The scientists must be asking why their xeno crate was replaced with an orange.
+This crate is the rarest, and yet the worst type of crate. It can spawn angry spiders and angry xenomorphs!
+
+If you die at any time, you are able to respawn by clicking the Bluespace Crystal on your action bar.
+
+With all this information in mind, good luck, and welcome to 2 Greys 2 Crowbars!

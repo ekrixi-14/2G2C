@@ -29,7 +29,7 @@
           prob: 0.1
           amount: 3
         - id: MobXenoDrone
-          prob: 0.1
+          prob: 0.01
           amount: 1
 
 - type: entity
@@ -42,7 +42,7 @@
     - type: StorageFill
       contents:
         - id: MedkitFilled
-          prob: 0.80
+          prob: 1
           amount: 1
         - id: MedkitBruteFilled
           prob: 0.60
@@ -70,41 +70,41 @@
     - type: StorageFill
       contents:
         - id: WeaponShotgunSawn
-          prob: 0.25
+          prob: 0.50
         - id: WeaponShotgunKammerer
           prob: 0.25
         - id: WeaponShotgunDoubleBarreled
-          prob: 0.25
+          prob: 0.40
         - id: WeaponRevolverInspector
-          prob: 0.25
+          prob: 0.60
         - id: WeaponPistolHandmade
-          prob: 0.25
+          prob: 0.80
         - id: WeaponPistolCobra
-          prob: 0.25
+          prob: 0.60
         - id: WeaponSubMachineGunC20r
-          prob: 0.25
+          prob: 0.20
         - id: WeaponSubMachineGunVector
-          prob: 0.25
+          prob: 0.12
         - id: WeaponLaserGun
-          prob: 0.25
+          prob: 0.19
         - id: BoxLethalshot
-          prob: 0.25
+          prob: 0.65
         - id: BoxShotgunIncendiary
-          prob: 0.25
+          prob: 0.15
         - id: SpeedLoaderMagnum
           prob: 0.25
         - id: CartridgePistol
           prob: 0.25
-        - id: CartridgePistolHighVelocity
-          prob: 0.25
-        - id: CartridgePistolPractice
-          prob: 0.25
+        - id: MagazinePistolHighVelocity
+          prob: 0.15
+        - id: MagazinePistolPractice
+          prob: 0.55
         - id: MagazinePistolSubMachineGun
-          prob: 0.25
+          prob: 0.30
         - id: MagazineMagnumSubMachineGun
-          prob: 0.25
+          prob: 0.30
         - id: WeaponSubMachineGunVectorRubber
-          prob: 0.25
+          prob: 0.50
 
 - type: entity
   id: InterceptedCrateAnomaly
@@ -118,7 +118,7 @@
         - id: SalvageHumanCorpse
           prob: 0.9
           amount: 1
-        - id: MobGiantSpider
+        - id: MobGiantSpiderAngry
           prob: 0.95
           amount: 3
         - id: MobXenoDrone

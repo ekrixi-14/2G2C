@@ -9,3 +9,7 @@
 - type: lobbyBackground
   id: AME3
   background: /Textures/LobbyScreens/ame3.png
+
+- type: lobbyBackground
+  id: GoAway
+  background: /Textures/LobbyScreens/goaway.png
