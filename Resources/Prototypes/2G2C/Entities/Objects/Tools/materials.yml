@@ -24,7 +24,7 @@
     - type: Stack
       stackType: Tape
     - type: Handcuff
-      breakoutTime: 15
+      breakoutTime: 30
       cuffedRSI: Objects/Misc/zipties.rsi
       bodyIconState: body-overlay
       color: red
