@@ -13,6 +13,7 @@ using Content.Server.Visible;
 using Content.Server.Warps;
 using Content.Shared.CharacterAppearance;
 using Content.Shared.Actions;
+using Content.Shared.CharacterAppearance.Components;
 using Content.Shared.Examine;
 using Content.Shared.Follower;
 using Content.Shared.Ghost;
@@ -111,6 +112,7 @@ namespace Content.Server.Ghost
         {
             var urist = EntityManager.SpawnEntity("MobBSRespawn", transformComponent.MapPosition);
             EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Male.GetName("Human", _prototypeManager, _random);
+            if (TryComp<HumanoidAppearanceComponent>(urist, out var appearanceComp)) {if (appearanceComp.Sex == Sex.Female){ EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Female.GetName("Human", _prototypeManager, _random); }}
             if (mindComp.Mind != null) mindComp.Mind.TransferTo(urist, true);
             RejuvenateCommand.PerformRejuvenate(urist);
         }
@@ -125,6 +127,7 @@ namespace Content.Server.Ghost
         {
             var urist = EntityManager.SpawnEntity("MobBSRespawn", transformComponent.MapPosition);
             EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Male.GetName("Human", _prototypeManager, _random);
+            if (TryComp<HumanoidAppearanceComponent>(urist, out var appearanceComp)) {if (appearanceComp.Sex == Sex.Female){ EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Female.GetName("Human", _prototypeManager, _random); }}
             if (mindComp.Mind != null) mindComp.Mind.TransferTo(urist, true);
             RejuvenateCommand.PerformRejuvenate(urist);
         }
