@@ -1,0 +1,4 @@
+- type: damageModifierSet
+  id: Felinid
+  coefficients:
+    Blunt: 1.15

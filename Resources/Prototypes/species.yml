@@ -34,6 +34,14 @@
   skinColoration: Hues
 
 - type: species
+  id: Felinid
+  name: felinid
+  roundStart: true
+  prototype: MobFelinid
+  dollPrototype: MobFelinidDummy
+  skinColoration: HumanToned
+
+- type: species
   id: Skeleton
   name: Skeleton
   roundStart: false #unspooky, change it in october
