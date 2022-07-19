@@ -41,7 +41,6 @@
         - InterceptedCrateMedical
         - InterceptedCrateWeaponry
         - InterceptedCrateWeaponry
-        - InterceptedCrateAnomaly
       chance: 1
       intervalSeconds: 300
       minimumEntitiesSpawned: 1
