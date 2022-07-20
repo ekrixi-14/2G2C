@@ -14,7 +14,7 @@
   parent: BaseItem
   id: BluespacePocketifier2G2C
   name: bluespace pocketifier
-  description: A bluespace crystal encased in a plasteel box with advanced circuitry in the inside.
+  description: A handheld bluespace crystal encased in a plasteel box with advanced circuitry in the inside. Looks advanced.
   components:
     - type: Sprite
       sprite: 2G2C/Objects/Materials/bluespace.rsi
