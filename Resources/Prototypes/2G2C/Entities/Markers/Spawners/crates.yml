@@ -9,7 +9,7 @@
         - texture: Structures/Storage/Crates/generic.rsi/crate.png
     - type: TimedSpawner
       prototypes:
-        - CrateSupply
+        - InterceptedCrateSupply
       chance: 1
       intervalSeconds: 300
       minimumEntitiesSpawned: 1
