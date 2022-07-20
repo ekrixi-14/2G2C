@@ -83,13 +83,16 @@
       state: nails
     - type: Item
       size: 10
-      HeldPrefix: tape
+      HeldPrefix: nail
     - type: Stack
       stackType: Tape
+    - type: Construction
+      graph: NailGraph2G2C
+      node: Nail
     - type: MeleeWeapon
       damage:
         types:
-          Piercing: 10
+          Piercing: 5
       hitSound:
         path: "/Audio/Weapons/bladeslice.ogg"
 

@@ -1,0 +1,10 @@
+﻿- type: construction
+  name: nails
+  id: MetalNail
+  graph: MetalNail
+  startNode: start
+  targetNode: MetalNail
+  category: Weapons
+  description: A reinforced spear for when you need to do more than put holes in somebody.
+  icon: 2G2C/Objects/Materials/nails.rsi/nails.png
+  objectType: Item
