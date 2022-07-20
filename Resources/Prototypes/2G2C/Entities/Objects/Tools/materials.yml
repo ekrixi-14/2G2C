@@ -80,6 +80,7 @@
   components:
     - type: Sprite
       sprite: 2G2C/Objects/Materials/nails.rsi
+      state: nails
     - type: Item
       size: 10
       HeldPrefix: tape
@@ -97,8 +98,6 @@
   id: NailStack
   suffix: Full
   components:
-    - type: Sprite
-      sprite: 2G2C/Objects/Materials/nails.rsi
     - type: Stack
       count: 30
 
@@ -107,7 +106,5 @@
   id: NailStack1
   suffix: 1
   components:
-    - type: Sprite
-      sprite: 2G2C/Objects/Materials/nails.rsi
     - type: Stack
       count: 1
