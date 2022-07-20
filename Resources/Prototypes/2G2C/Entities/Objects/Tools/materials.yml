@@ -70,3 +70,44 @@
       state: tape-10
     - type: Stack
       count: 1
+
+- type: entity
+  parent: BaseItem
+  id: BaseNails
+  abstract: true
+  name: nails
+  description: Nails. They're pointy.
+  components:
+    - type: Sprite
+      sprite: 2G2C/Objects/Materials/nails.rsi
+    - type: Item
+      size: 10
+      HeldPrefix: tape
+    - type: Stack
+      stackType: Tape
+    - type: MeleeWeapon
+      damage:
+        types:
+          Piercing: 10
+      hitSound:
+        path: "/Audio/Weapons/bladeslice.ogg"
+
+- type: entity
+  parent: BaseNails
+  id: NailStack
+  suffix: Full
+  components:
+    - type: Sprite
+      sprite: 2G2C/Objects/Materials/nails.rsi
+    - type: Stack
+      count: 30
+
+- type: entity
+  parent: NailStack
+  id: NailStack1
+  suffix: 1
+  components:
+    - type: Sprite
+      sprite: 2G2C/Objects/Materials/nails.rsi
+    - type: Stack
+      count: 1
