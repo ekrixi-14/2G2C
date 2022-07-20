@@ -34,7 +34,7 @@
       sprite: 2G2C/Objects/Weapons/Melee/steel_baseball_bat.rsi
 
 - type: entity
-  name: steel baseball bat
+  name: plasteel baseball bat
   parent: BaseBallBat
   id: PlasteelBaseBallBat
   description: Steel Baseball Bat not enough for your greytiding needs? Enjoy!
@@ -48,4 +48,22 @@
           Blunt: 60
     - type: Clothing
       size: 35
+      sprite: 2G2C/Objects/Weapons/Melee/steel_baseball_bat.rsi
+
+- type: entity
+  name: magneto bat prototype
+  parent: BaseBallBat
+  id: PlasteelBaseBallBat
+  description: "\"FOR SAFETY REASONS: DO NOT HOLD THE MAGNETO BAT NEAR YOUR HEAD. THE MAGNET WILL ATTRACT TOWARD YOUR HEAD AND (POTENTIALLY) CAUSE DEATH. NANOTRASEN IS NOT AT FAULT FOR HARM, INJURY OR DEATH.\""
+  components:
+    - type: Sprite
+      sprite: 2G2C/Objects/Weapons/Melee/steel_baseball_bat.rsi
+      state: icon
+    - type: MeleeWeapon
+      damage:
+        types:
+          # Nerfed from 100000 to 250, it gibs humans and deals mass structural damage, but it's stupidly OP. At least this can delete Riveted in a few hits...
+          Blunt: 250 # It's magboots, and a bat, and a chance to fucking explode. Amazing.
+    - type: Clothing
+      size: 9999 # Your back is going to be attracted by the Magneto and IMMEDIATELY DIE
       sprite: 2G2C/Objects/Weapons/Melee/steel_baseball_bat.rsi
