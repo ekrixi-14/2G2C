@@ -1,0 +1,23 @@
+﻿- type: entity
+  parent: BaseItem
+  id: BluespaceCrystal2G2C
+  name: bluespace crystal
+  description: A bluespace crystal, why are you asking me what this does? I don't know either! It looks sparkly though.
+  components:
+    - type: Sprite
+      sprite: 2G2C/Objects/Materials/bluespace.rsi
+      state: bluespace
+    - type: Item
+      size: 1
+
+- type: entity
+  parent: BaseItem
+  id: BluespacePocketifier2G2C
+  name: bluespace pocketifier
+  description: A bluespace crystal encased in a plasteel box with advanced circuitry in the inside.
+  components:
+    - type: Sprite
+      sprite: 2G2C/Objects/Materials/bluespace.rsi
+      state: bluespace_pocketifier
+    - type: Item
+      size: -100
