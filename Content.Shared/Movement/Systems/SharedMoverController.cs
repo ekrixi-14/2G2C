@@ -2,6 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Audio;
 using Content.Shared.CCVar;
 using Content.Shared.Friction;
+using Content.Shared.Gravity;
 using Content.Shared.Inventory;
 using Content.Shared.Maps;
 using Content.Shared.MobState.Components;
@@ -34,8 +35,8 @@ namespace Content.Shared.Movement.Systems
         [Dependency] private readonly ITileDefinitionManager _tileDefinitionManager = default!;
         [Dependency] private readonly InventorySystem _inventory = default!;
         [Dependency] private readonly SharedContainerSystem _container = default!;
+        [Dependency] private readonly SharedGravitySystem _gravity = default!;
         [Dependency] private readonly SharedMobStateSystem _mobState = default!;
-        [Dependency] private readonly SharedPhysicsSystem _physics = default!;
         [Dependency] private readonly TagSystem _tags = default!;
 
         private const float StepSoundMoveDistanceRunning = 2;
@@ -113,7 +114,7 @@ namespace Content.Shared.Movement.Systems
             }
 
             UsedMobMovement[mover.Owner] = true;
-            var weightless = mover.Owner.IsWeightless(physicsComponent, mapManager: _mapManager, entityManager: EntityManager);
+            var weightless = _gravity.IsWeightless(mover.Owner, physicsComponent, xform);
             var (walkDir, sprintDir) = GetVelocityInput(mover);
             var touching = false;
 
@@ -131,7 +132,7 @@ namespace Content.Shared.Movement.Systems
                     touching = ev.CanMove;
 
                     if (!touching && TryComp<MobMoverComponent>(xform.Owner, out var mobMover))
-                        touching |= IsAroundCollider(_physics, xform, mobMover, physicsComponent);
+                        touching |= IsAroundCollider(PhysicsSystem, xform, mobMover, physicsComponent);
                 }
 
                 if (!touching)
@@ -227,7 +228,7 @@ namespace Content.Shared.Movement.Systems
             if (!weightless || touching)
                 Accelerate(ref velocity, in worldTotal, accel, frameTime);
 
-            _physics.SetLinearVelocity(physicsComponent, velocity);
+            PhysicsSystem.SetLinearVelocity(physicsComponent, velocity);
         }
 
         private void Friction(float minimumFrictionSpeed, float frameTime, float friction, ref Vector2 velocity)
