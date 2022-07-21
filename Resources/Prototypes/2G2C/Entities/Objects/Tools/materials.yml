@@ -22,7 +22,7 @@
 #      size: 10
 #      HeldPrefix: tape
     - type: Stack
-      stackType: Tape
+      stackType: GreyTape
     - type: Handcuff
       breakoutTime: 30
       cuffedRSI: Objects/Misc/zipties.rsi
@@ -68,5 +68,46 @@
     - type: Sprite
       sprite: 2G2C/Objects/Materials/tape.rsi
       state: tape-10
+    - type: Stack
+      count: 1
+
+- type: entity
+  parent: BaseItem
+  id: BaseNails
+  abstract: true
+  name: nails
+  description: Nails. They're pointy.
+  components:
+    - type: Sprite
+      sprite: 2G2C/Objects/Materials/nails.rsi
+      state: nails
+    - type: Item
+      size: 10
+      HeldPrefix: nail
+    - type: Stack
+      stackType: GreyNails
+    - type: Construction
+      graph: MetalNail
+      node: Nail
+    - type: MeleeWeapon
+      damage:
+        types:
+          Piercing: 5
+      hitSound:
+        path: "/Audio/Weapons/bladeslice.ogg"
+
+- type: entity
+  parent: BaseNails
+  id: NailStack
+  suffix: Full
+  components:
+    - type: Stack
+      count: 30
+
+- type: entity
+  parent: NailStack
+  id: NailStack1
+  suffix: 1
+  components:
     - type: Stack
       count: 1
