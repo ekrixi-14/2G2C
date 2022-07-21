@@ -16,7 +16,7 @@
       size: 9999 # i dont think your fuckign cloth bag would like a sharp as fuck bat in it
       sprite: 2G2C/Objects/Weapons/Melee/nailed_baseball_bat.rsi
     - type: Construction
-      graph: NailedBaseBallBata
+      graph: NailedBaseBallBat
       node: nbbbat
 
 - type: entity

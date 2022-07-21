@@ -6,7 +6,7 @@
       edges:
         - to: spear
           steps:
-            - material: Tape
+            - material: GreyTape
               amount: 2
               doAfter: 2
             - material: MetalRod

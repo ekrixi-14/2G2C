@@ -22,7 +22,7 @@
 #      size: 10
 #      HeldPrefix: tape
     - type: Stack
-      stackType: Tape
+      stackType: GreyTape
     - type: Handcuff
       breakoutTime: 30
       cuffedRSI: Objects/Misc/zipties.rsi
@@ -85,7 +85,7 @@
       size: 10
       HeldPrefix: nail
     - type: Stack
-      stackType: Tape
+      stackType: GreyNails
     - type: Construction
       graph: NailGraph2G2C
       node: Nail
