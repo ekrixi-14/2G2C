@@ -1,0 +1,16 @@
+﻿- type: constructionGraph
+  id: MetalNail
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: MetalNail
+          completed:
+            - !type:SetStackCount
+              amount: 8
+          steps:
+            - material: Steel
+              amount: 1
+
+    - node: MetalNail
+      entity: NailStack

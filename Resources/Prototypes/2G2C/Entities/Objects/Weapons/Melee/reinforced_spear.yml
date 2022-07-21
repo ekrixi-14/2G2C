@@ -2,7 +2,7 @@
   name: reinforced spear
   parent: BaseItem
   id: ReinforcedSpear
-  description: A sharper reinforced version of the spear, deals minor structural damage
+  description: A sharper reinforced version of the spear, dealing minor structural damage and can take a beating
   components:
     - type: Tag
       tags:

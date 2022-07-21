@@ -1,0 +1,43 @@
+﻿- type: construction
+  name: reinforced spear
+  id: ReinforcedSpear
+  graph: ReinforcedSpear
+  startNode: start
+  targetNode: rspear
+  category: Weapons
+  description: A reinforced spear for when you need to do more than put holes in somebody.
+  icon: 2G2C/Objects/Weapons/Melee/rspear.rsi/spear.png
+  objectType: Item
+
+- type: construction
+  name: nailed baseball bat
+  id: NailedBaseBallBat
+  graph: NailedBaseBallBat
+  startNode: start
+  targetNode: nbbbat
+  category: Weapons
+  description: Perfect for putting down slimes.
+  icon: 2G2C/Objects/Weapons/Melee/nailed_baseball_bat.rsi/icon.png
+  objectType: Item
+
+- type: construction
+  name: plasteel baseball bat
+  id: PlasteelBaseBallBat
+  graph: PlasteelBaseBallBat
+  startNode: start
+  targetNode: pbbbat
+  category: Weapons
+  description: Steel bat not robust enough for you? Damn. Here, try this.
+  icon: 2G2C/Objects/Weapons/Melee/steel_baseball_bat.rsi/icon.png
+  objectType: Item
+
+- type: construction
+  name: steel baseball bat
+  id: SteelBaseBallBat
+  graph: SteelBaseBallBat
+  startNode: start
+  targetNode: sbbbat
+  category: Weapons
+  description: Regular bat not robust enough? Here!
+  icon: 2G2C/Objects/Weapons/Melee/steel_baseball_bat.rsi/icon.png
+  objectType: Item

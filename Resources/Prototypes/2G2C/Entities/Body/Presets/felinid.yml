@@ -1,5 +1,5 @@
 - type: bodyPreset
-  name: "Felinid"
+  name: "felinid"
   id: FelinidPreset
   partIDs:
     head: HeadHuman

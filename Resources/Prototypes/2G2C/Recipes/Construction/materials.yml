@@ -1,10 +1,10 @@
 ﻿- type: construction
-  name: reinforced spear
-  id: ReinforcedSpear
-  graph: ReinforcedSpear
+  name: nails
+  id: MetalNail
+  graph: MetalNail
   startNode: start
-  targetNode: rspear
+  targetNode: MetalNail
   category: Weapons
   description: A reinforced spear for when you need to do more than put holes in somebody.
-  icon: 2G2C/Objects/Weapons/Melee/rspear.rsi/spear.png
+  icon: 2G2C/Objects/Materials/nails.rsi/nails.png
   objectType: Item

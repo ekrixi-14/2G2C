@@ -4,7 +4,7 @@
     - extended
     - shittersafari
   name: extended-title
-  showInVote: false #2boring2vote
+  showInVote: true
   description: extended-description
   rules:
     - BasicStationEventScheduler
@@ -15,7 +15,7 @@
     - secret
     - sekrit
   name: secret-title
-  showInVote: true
+  showInVote: false
   description: secret-description
   rules:
     - Secret
@@ -26,8 +26,8 @@
     - sandbox
   name: sandbox-title
   description: sandbox-description
-  showInVote: true
-  maxPlayers: 5
+  showInVote: false
+  maxPlayers: 1
   rules:
     - Sandbox
 
@@ -49,6 +49,7 @@
     - sus
   name: suspicion-title
   description: suspicion-description
+  showInVote: false
   rules:
     - Suspicion
 
@@ -59,6 +60,7 @@
     - dm
   name: death-match-title
   description: death-match-description
+  showInVote: false
   rules:
     - DeathMatch
 

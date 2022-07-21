@@ -1,5 +1,11 @@
 ﻿- type: stack
-  id: Tape
+  id: GreyTape
   name: duct tape
   icon: /Textures/2G2C/Objects/Materials/tape.rsi/tape-30.png
   spawn: TapeStack1
+
+- type: stack
+  id: GreyNails
+  name: nails
+  icon: /Textures/2G2C/Objects/Materials/nails.rsi/nails.png
+  spawn: NailStack1

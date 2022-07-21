@@ -9,7 +9,7 @@
             - material: MetalRod
               amount: 6
               doAfter: 2
-            - material: Tape
+            - material: GreyTape
               amount: 8
               doAfter: 1
             - prototype: ShardGlassReinforced
