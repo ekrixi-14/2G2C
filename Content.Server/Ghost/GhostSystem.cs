@@ -74,26 +74,43 @@ namespace Content.Server.Ghost
             if (args.Handled)
                 return;
 
-            var latejoins = EntityManager.EntityQuery<SpawnPointComponent, TransformComponent>();
-            foreach (var spawn in latejoins)
-            {
-                if (spawn.Item1.SpawnType == SpawnPointType.LateJoin)
-                {
-                    TryComp<MindComponent>(uid, out var mindComp);
-                    // TryComp<VisitingMindComponent>(uid, out var mindComp);
+            var latejoins = EntityManager.EntityQuery<SpawnPointComponent>(true).ToList();
+            SpawnPointComponent? spawn;
+            TransformComponent? transform = null;
 
-                    if (mindComp != null)
+            while (transform == null)
+            {
+                spawn = _random.Pick(latejoins);
+                if (spawn.SpawnType == SpawnPointType.LateJoin)
+                {
+                    transform = EntityManager.GetComponent<TransformComponent>(spawn.Owner);
+                    break;
+                }
+
+            }
+
+            TryComp<MindComponent>(uid, out var mindComp);
+
+            if (mindComp != null)
+            {
+                if (mindComp.Mind == null)
+                {
+                    TryComp<VisitingMindComponent>(uid, out var mindComp2);
+                    if (mindComp2 != null)
                     {
-                        if (mindComp.Mind == null)
+                        if (mindComp2.Mind.Session != null)
                         {
-                            // fuck this shit, WHY ISNT VISITING MIND COMPONENT UNDER MIND COMPONENT? WHAT THE FUCK!!!!
-                            // I HATE WORKAROUNDS I HATE WORKAROUNDS I HATE WORKAROUNDS
-                            TryComp<VisitingMindComponent>(uid, out var mindComp2);
-                            SpawnBluespaceReincarnationVisiting(mindComp2!, spawn.Item2);
+                            SpawnBluespaceReincarnation(mindComp2.Mind.Session, transform);
                         }
-                        else
+                    }
+                }
+                else
+                {
+                    if (mindComp.Mind != null)
+                    {
+                        if (mindComp.Mind.Session != null)
                         {
-                            SpawnBluespaceReincarnation(mindComp!, spawn.Item2);
+                            SpawnBluespaceReincarnation(mindComp.Mind.Session, transform);
                         }
                     }
                 }
@@ -108,27 +125,19 @@ namespace Content.Server.Ghost
         /// <param name="mindComp"></param>
         /// <param name="transformComponent"></param>
 
-        private void SpawnBluespaceReincarnation(MindComponent mindComp, TransformComponent transformComponent)
+        private void SpawnBluespaceReincarnation(IPlayerSession session, TransformComponent transformComponent)
         {
             var urist = EntityManager.SpawnEntity("MobBSRespawn", transformComponent.MapPosition);
-            EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Male.GetName("Human", _prototypeManager, _random);
-            if (TryComp<HumanoidAppearanceComponent>(urist, out var appearanceComp)) {if (appearanceComp.Sex == Sex.Female){ EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Female.GetName("Human", _prototypeManager, _random); }}
-            if (mindComp.Mind != null) mindComp.Mind.TransferTo(urist, true);
-            RejuvenateCommand.PerformRejuvenate(urist);
-        }
+            var name = Sex.Male.GetName("Human", _prototypeManager, _random);
 
-
-        /// <summary>
-        /// Does the same shit as SpawnBluespaceReincarnation but with a visiting mind component
-        /// </summary>
-        /// <param name="mindComp"></param>
-        /// <param name="transformComponent"></param>
-        private void SpawnBluespaceReincarnationVisiting(VisitingMindComponent mindComp, TransformComponent transformComponent)
-        {
-            var urist = EntityManager.SpawnEntity("MobBSRespawn", transformComponent.MapPosition);
             EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Male.GetName("Human", _prototypeManager, _random);
-            if (TryComp<HumanoidAppearanceComponent>(urist, out var appearanceComp)) {if (appearanceComp.Sex == Sex.Female){ EntityManager.GetComponent<MetaDataComponent>(urist).EntityName = Sex.Female.GetName("Human", _prototypeManager, _random); }}
-            if (mindComp.Mind != null) mindComp.Mind.TransferTo(urist, true);
+            var newMind = new Mind.Mind(session.UserId)
+            {
+                CharacterName = name
+            };
+
+            newMind.ChangeOwningPlayer(session.UserId);
+            newMind.TransferTo(urist);
             RejuvenateCommand.PerformRejuvenate(urist);
         }
 
