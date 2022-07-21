@@ -5,7 +5,7 @@
   variants: 4
   placementVariants: [0, 1, 2, 3]
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -22,7 +22,7 @@
   variants: 4
   placementVariants: [0, 1, 2, 3]
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -39,7 +39,7 @@
   variants: 4
   placementVariants: [0, 1, 2, 3]
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -56,7 +56,7 @@
   variants: 4
   placementVariants: [ 0, 1, 2, 3 ]
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -71,7 +71,7 @@
   name: techmaint floor
   texture: "tech_maint"
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -86,7 +86,7 @@
   name: reinforced floor
   texture: "reinforced"
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -101,7 +101,7 @@
   name: mono floor
   texture: "mono"
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -116,7 +116,7 @@
   name: linoleum floor
   texture: "lino"
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -131,7 +131,7 @@
   name: dirty steel floor
   texture: "steel_dirty"
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -146,7 +146,7 @@
   name: elevator shaft
   texture: "elevator_shaft"
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -161,7 +161,7 @@
   name: diamond plate floor
   texture: "metaldiamond"
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -176,7 +176,7 @@
   name: rock floor
   texture: "rock_vault"
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -191,7 +191,7 @@
   name: blue tile
   texture: blue
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -207,7 +207,7 @@
   name: freezer
   texture: "freezer"
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -222,7 +222,7 @@
   name: showroom floor
   texture: "showroom"
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -237,7 +237,7 @@
   name: hydro floor
   texture: "hydro"
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -254,7 +254,7 @@
   variants: 4
   placementVariants: [ 0, 1, 2, 3 ]
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -269,7 +269,7 @@
   name: clown floor
   texture: "clown"
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -284,7 +284,7 @@
   name: mime floor
   texture: "mime"
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -299,7 +299,7 @@
   name: kitchen floor
   texture: "kitchen"
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -314,7 +314,7 @@
   name: laundry floor
   texture: "laundry"
   base_turfs:
-  - plating
+    - plating_grass_2g2c
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -330,7 +330,7 @@
   name: blue arcade floor
   texture: arcadeblue
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -345,7 +345,7 @@
   name: blue arcade floor
   texture: arcadeblue2
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -360,7 +360,7 @@
   name: red arcade floor
   texture: arcadered
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -375,7 +375,7 @@
   name: eighties floor
   texture: eighties
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -390,7 +390,7 @@
   name: clown carpet floor
   texture: carpetclown
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -405,7 +405,7 @@
   name: office carpet floor
   texture: carpetoffice
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -422,7 +422,7 @@
   variants: 4
   placementVariants: [0, 1, 2, 3]
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -439,7 +439,7 @@
   variants: 4
   placementVariants: [0, 1, 2, 3]
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -455,7 +455,7 @@
   name: white shuttle floor
   texture: shuttlewhite
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -470,7 +470,7 @@
   name: blue shuttle floor
   texture: shuttleblue
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -485,7 +485,7 @@
   name: orange shuttle floor
   texture: shuttleorange
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -500,7 +500,7 @@
   name: purple shuttle floor
   texture: shuttlepurple
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -515,7 +515,7 @@
   name: red shuttle floor
   texture: shuttlered
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -532,7 +532,7 @@
   name: gold tile
   texture: gold
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -547,7 +547,7 @@
   name: silver tile
   texture: silver
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -562,7 +562,7 @@
   name: glass floor
   texture: glass
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -577,7 +577,7 @@
   name: reinforced glass floor
   texture: rglass
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -593,7 +593,7 @@
   name: green circuit floor
   texture: "green_circuit"
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -608,7 +608,7 @@
   name: blue circuit floor
   texture: "blue_circuit"
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -624,7 +624,7 @@
   name: snow
   texture: snow
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -639,7 +639,7 @@
   name: grass floor
   texture: "grass"
   base_turfs:
-  - plating
+    - plating_grass_2g2cz
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -654,7 +654,7 @@
   name: jungle grass floor
   texture: grassjungle
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -670,7 +670,7 @@
   name: asteroid floor
   texture: Asteroid/asteroid_sand
   base_turfs:
-  - space
+    - space
   is_subfloor: false
   can_crowbar: false
   footstep_sounds:
@@ -684,7 +684,7 @@
   name: asteroid tile
   texture: Asteroid/asteroid_tile
   base_turfs:
-  - plating
+    - plating
   is_subfloor: false
   can_crowbar: true
   footstep_sounds:
@@ -700,7 +700,7 @@
   variants: 3
   placementVariants: [ 0, 1, 2 ]
   base_turfs:
-  - space
+    - space
   is_subfloor: false
   can_crowbar: false
   footstep_sounds:
@@ -716,7 +716,7 @@
   variants: 3
   placementVariants: [ 0, 1, 2 ]
   base_turfs:
-  - space
+    - space
   is_subfloor: false
   can_crowbar: false
   footstep_sounds:
@@ -732,7 +732,7 @@
   variants: 3
   placementVariants: [ 0, 1, 2 ]
   base_turfs:
-  - space
+    - space
   is_subfloor: false
   can_crowbar: false
   footstep_sounds:
@@ -746,7 +746,7 @@
   name: asteroid dug coarse sand
   texture: Asteroid/asteroid_coarse_sand_dug
   base_turfs:
-  - space
+    - space
   is_subfloor: false
   can_crowbar: false
   footstep_sounds:
@@ -760,7 +760,7 @@
   name: asteroid ironsand
   texture: ironsand1
   base_turfs:
-  - space
+    - space
   is_subfloor: false
   can_crowbar: false
   footstep_sounds:
@@ -774,7 +774,7 @@
   name: asteroid ironsand pebbles
   texture: ironsand2
   base_turfs:
-  - space
+    - space
   is_subfloor: false
   can_crowbar: false
   footstep_sounds:
@@ -788,7 +788,7 @@
   name: asteroid ironsand pebbles 2
   texture: ironsand3
   base_turfs:
-  - space
+    - space
   is_subfloor: false
   can_crowbar: false
   footstep_sounds:
@@ -802,7 +802,7 @@
   name: asteroid ironsand rock
   texture: ironsand4
   base_turfs:
-  - space
+    - space
   is_subfloor: false
   can_crowbar: false
   footstep_sounds:
@@ -810,4 +810,3 @@
   friction: 0.30
   thermalConductivity: 0.04
   heatCapacity: 10000
-
