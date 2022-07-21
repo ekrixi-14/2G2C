@@ -1,0 +1,17 @@
+- type: gameMap
+  id: atreides
+  mapName: 'Atreides'
+  mapPath: /Maps/atreides.yml
+  minPlayers: 5
+  maxPlayers: 65
+  votable: False
+  stations:
+    Atreides:
+      mapNameTemplate: '{0} Atreides {1}'
+      nameGenerator:
+        !type:NanotrasenNameGenerator
+        prefixCreator: 'LC'
+      overflowJobs:
+        - Passenger
+      availableJobs:
+        Passenger: [ -1, -1 ]

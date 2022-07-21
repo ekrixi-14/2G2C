@@ -1,0 +1,12 @@
+﻿- type: tile
+  id: plating_grass_2g2c
+  name: grass plating
+  texture: "grass"
+  base_turfs:
+    - lattice
+  is_subfloor: true
+  footstep_sounds:
+    collection: footstep_grass
+  friction: 0.04
+  thermalConductivity: 0.00
+  heatCapacity: 10000
