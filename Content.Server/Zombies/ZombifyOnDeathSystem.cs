@@ -27,7 +27,6 @@ using Robust.Shared.Prototypes;
 using Content.Shared.Roles;
 using Content.Server.Traitor;
 using Content.Shared.Zombies;
-using Content.Shared.Popups;
 using Content.Server.Atmos.Miasma;
 using Content.Server.IdentityManagement;
 
@@ -143,7 +142,7 @@ namespace Content.Server.Zombies
             _serverInventory.TryUnequip(target, "gloves", true, true);
 
             //popup
-            _popupSystem.PopupEntity(Loc.GetString("zombie-transform", ("target", target)), target, Filter.Pvs(target), PopupType.LargeCaution);
+            _popupSystem.PopupEntity(Loc.GetString("zombie-transform", ("target", target)), target, Filter.Pvs(target));
 
             //Make it sentient if it's an animal or something
             if (!HasComp<InputMoverComponent>(target)) //this component is cursed and fucks shit up
