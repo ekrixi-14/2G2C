@@ -8,4 +8,4 @@
   id: GreyNails
   name: nails
   icon: /Textures/2G2C/Objects/Materials/nails.rsi/nails.png
-  spawn: NailsStack1
+  spawn: NailStack1

@@ -87,7 +87,7 @@
     - type: Stack
       stackType: GreyNails
     - type: Construction
-      graph: NailGraph2G2C
+      graph: MetalNail
       node: Nail
     - type: MeleeWeapon
       damage:
