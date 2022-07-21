@@ -26,8 +26,8 @@
     - sandbox
   name: sandbox-title
   description: sandbox-description
-  showInVote: true
-  maxPlayers: 5
+  showInVote: false
+  maxPlayers: 1
   rules:
     - Sandbox
 
@@ -49,7 +49,7 @@
     - sus
   name: suspicion-title
   description: suspicion-description
-  showInVote: true
+  showInVote: false
   rules:
     - Suspicion
 
@@ -60,7 +60,7 @@
     - dm
   name: death-match-title
   description: death-match-description
-  showInVote: true
+  showInVote: false
   rules:
     - DeathMatch
 
