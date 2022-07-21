@@ -15,6 +15,9 @@
     - type: Clothing
       size: 9999 # i dont think your fuckign cloth bag would like a sharp as fuck bat in it
       sprite: 2G2C/Objects/Weapons/Melee/nailed_baseball_bat.rsi
+    - type: Construction
+      graph: NailedBaseBallBata
+      node: nbbbat
 
 - type: entity
   name: steel baseball bat
@@ -53,17 +56,50 @@
 - type: entity
   name: magneto bat prototype
   parent: BaseBallBat
-  id: PlasteelBaseBallBat
+  id: MagnetoBaseBallBat
   description: "\"FOR SAFETY REASONS: DO NOT HOLD THE MAGNETO BAT NEAR YOUR HEAD. THE MAGNET WILL ATTRACT TOWARD YOUR HEAD AND (POTENTIALLY) CAUSE DEATH. NANOTRASEN IS NOT AT FAULT FOR HARM, INJURY OR DEATH.\""
   components:
     - type: Sprite
       sprite: 2G2C/Objects/Weapons/Melee/steel_baseball_bat.rsi
       state: icon
+
+    # Instagib part
     - type: MeleeWeapon
       damage:
         types:
-          # Nerfed from 100000 to 250, it gibs humans and deals mass structural damage, but it's stupidly OP. At least this can delete Riveted in a few hits...
-          Blunt: 250 # It's magboots, and a bat, and a chance to fucking explode. Amazing.
+          # Nerfed from 100000 to 1000 (damn slimes), it gibs humans and deals mass structural damage, but it's stupidly OP. At least this can delete Riveted in a few hits...
+          Blunt: 1000 # It's magboots, and a bat, and a chance to fucking explode. Amazing.
+    - type: DamageOtherOnHit
+      damage:
+        types:
+          Blunt: 1000 # Throwing the thing WILL instagib, so if you see this shit going toward you RUN LIKE SHIT
+    - type: DamageOnLand
+      damage:
+        types:
+          Blunt: 1000 # Destroy on throw, meaning tasers/electric shocks/whatever incapacitates will kill the user
+
+    # Health related shit
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 1
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: GlassBreak
+            - !type:ExplodeBehavior
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+
     - type: Clothing
       size: 9999 # Your back is going to be attracted by the Magneto and IMMEDIATELY DIE
       sprite: 2G2C/Objects/Weapons/Melee/steel_baseball_bat.rsi
+
+    - type: Explosive
+      explosionType: Default
+      intensitySlope: 8
+      totalIntensity: 1000
+      maxIntensity: 1000 # Protobat is a bitch.
