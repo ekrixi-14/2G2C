@@ -44,6 +44,7 @@ namespace Content.Shared.Gravity
                 if (TryComp<MagbootsComponent>(ent, out var boots) && boots.On)
                     return false;
             }
+
             if (!gravityEnabled || !xform.Coordinates.IsValid(EntityManager)) return true;
 
             var tile = grid.GetTileRef(xform.Coordinates).Tile;
