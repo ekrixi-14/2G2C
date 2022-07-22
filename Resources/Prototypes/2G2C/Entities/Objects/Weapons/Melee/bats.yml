@@ -31,7 +31,7 @@
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 30
+          Blunt: 20
     - type: Clothing
       size: 25
       sprite: 2G2C/Objects/Weapons/Melee/steel_baseball_bat.rsi
@@ -48,7 +48,7 @@
     - type: MeleeWeapon
       damage:
         types:
-          Blunt: 60
+          Blunt: 32
     - type: Clothing
       size: 35
       sprite: 2G2C/Objects/Weapons/Melee/steel_baseball_bat.rsi
