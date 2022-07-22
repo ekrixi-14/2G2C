@@ -4,7 +4,7 @@
   mapPath: /Maps/atreides.yml
   minPlayers: 5
   maxPlayers: 65
-  votable: False
+  votable: false
   stations:
     Atreides:
       mapNameTemplate: '{0} Atreides {1}'
