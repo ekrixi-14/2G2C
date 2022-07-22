@@ -7,6 +7,7 @@ using Content.Server.Ghost.Components;
 using Content.Server.Mind;
 using Content.Server.Mind.Components;
 using Content.Server.Players;
+using Content.Server.Popups;
 using Content.Server.Spawners.Components;
 using Content.Server.Storage.Components;
 using Content.Server.Visible;
@@ -19,11 +20,13 @@ using Content.Shared.Follower;
 using Content.Shared.Ghost;
 using Content.Shared.MobState.Components;
 using Content.Shared.Movement.Events;
+using Content.Shared.Popups;
 using Content.Shared.Species;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
 using Robust.Shared.Console;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -43,6 +46,7 @@ namespace Content.Server.Ghost
         [Dependency] private readonly EntityLookupSystem _lookup = default!;
         [Dependency] private readonly FollowerSystem _followerSystem = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
+        [Dependency] private readonly PopupSystem _popupSystem = default!;
 
         public override void Initialize()
         {
@@ -100,7 +104,7 @@ namespace Content.Server.Ghost
                     {
                         if (mindComp2.Mind.Session != null)
                         {
-                            SpawnBluespaceReincarnation(mindComp2.Mind.Session, transform);
+                            SpawnBluespaceReincarnation(mindComp2.Mind.Session, transform, component.TimeOfDeath, true);
                         }
                     }
                 }
@@ -110,7 +114,7 @@ namespace Content.Server.Ghost
                     {
                         if (mindComp.Mind.Session != null)
                         {
-                            SpawnBluespaceReincarnation(mindComp.Mind.Session, transform);
+                            SpawnBluespaceReincarnation(mindComp.Mind.Session, transform, component.TimeOfDeath, true);
                         }
                     }
                 }
@@ -125,8 +129,19 @@ namespace Content.Server.Ghost
         /// <param name="mindComp"></param>
         /// <param name="transformComponent"></param>
 
-        private void SpawnBluespaceReincarnation(IPlayerSession session, TransformComponent transformComponent)
+        private void SpawnBluespaceReincarnation(IPlayerSession session, TransformComponent transformComponent, TimeSpan TimeOfDeath, bool checkMinimumTime = false)
         {
+            var time = 180;
+
+            if (checkMinimumTime)
+            {
+                var timeSinceDeath = _gameTiming.RealTime.Subtract(TimeOfDeath);
+                if (timeSinceDeath.TotalSeconds < time)
+                {
+                    _popupSystem.PopupCursor(Loc.GetString("ghost-respawn-cooldown-message", ("time", Math.Round(timeSinceDeath.TotalSeconds - time * -1))), Filter.Empty().AddPlayer(session), PopupType.MediumCaution);
+                    return;
+                }
+            }
             var urist = EntityManager.SpawnEntity("MobBSRespawn", transformComponent.MapPosition);
             var name = Sex.Male.GetName("Human", _prototypeManager, _random);
 
