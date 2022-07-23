@@ -8,7 +8,7 @@
     - type: StorageFill
       contents:
         - id: TapeStack
-          prob: 0.10
+          prob: 0.11
           amount: 1
         - id: SheetSteel
           prob: 0.80
