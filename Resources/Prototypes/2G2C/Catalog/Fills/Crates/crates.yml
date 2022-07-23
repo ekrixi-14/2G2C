@@ -68,6 +68,12 @@
         - id: MedkitAdvancedFilled
           prob: 0.25
           amount: 1
+        - id: MobGiantSpiderAngry
+          prob: 0.05
+          amount: 3
+        - id: MobXenoDrone
+          prob: 0.001
+          amount: 1
 
 - type: entity
   id: InterceptedCrateWeaponry
@@ -114,6 +120,12 @@
           prob: 0.30
         - id: WeaponSubMachineGunVectorRubber
           prob: 0.50
+        - id: MobGiantSpiderAngry
+          prob: 0.25
+          amount: 3
+        - id: MobXenoDrone
+          prob: 0.1
+          amount: 1
 
 - type: entity
   id: InterceptedCrateAnomaly
