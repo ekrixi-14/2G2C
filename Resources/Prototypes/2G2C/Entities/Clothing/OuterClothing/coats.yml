@@ -1,0 +1,10 @@
+﻿- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatHyenhSweater
+  name: hyenh's sweater
+  description: Hyenh...?
+  components:
+    - type: Sprite
+      sprite: 2G2C/Clothing/OuterClothing/Coats/hyenh.rsi
+    - type: Clothing
+      sprite: 2G2C/Clothing/OuterClothing/Coats/hyenh.rsi
