@@ -22,13 +22,9 @@
       damage:
         types:
           Piercing: 15
-    - type: Clothing
+    - type: Item
       size: 40
       sprite: 2G2C/Objects/Weapons/Melee/rspear.rsi
-      quickEquip: false
-      Slots:
-        - back
-        - suitStorage
     - type: Construction
       graph: Spear
       node: spear
