@@ -7,20 +7,9 @@
   components:
     - type: Sprite
       sprite: 2G2C/Objects/Materials/tape.rsi
-    - type: Clothing
-      HeldPrefix: tape
-      Slots: [ mask, eyes ]
-      sprite: 2G2C/Objects/Materials/tape.rsi
-      state: tape-30
+    - type: Item
       size: 10
-    - type: Blindfold
-    - type: IngestionBlocker
-    - type: AddAccentClothing
-      accent: ReplacementAccent
-      replacement: mumble
-#    - type: Item
-#      size: 10
-#      HeldPrefix: tape
+      HeldPrefix: tape
     - type: Stack
       stackType: GreyTape
     - type: Handcuff
