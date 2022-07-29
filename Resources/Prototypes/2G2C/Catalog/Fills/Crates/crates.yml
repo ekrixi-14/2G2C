@@ -8,16 +8,16 @@
     - type: StorageFill
       contents:
         - id: TapeStack
-          prob: 0.20
+          prob: 0.11
           amount: 1
         - id: SheetSteel
-          prob: 0.85
+          prob: 0.80
           amount: 1
         - id: SheetGlass
-          prob: 0.65
+          prob: 0.50
           amount: 1
         - id: SheetPlasteel
-          prob: 0.15
+          prob: 0.20
           amount: 1
         - id: CableApcStack
           prob: 0.50
@@ -29,13 +29,13 @@
           prob: 0.15
           amount: 1
         - id: ClothingHandsGlovesColorYellow
-          prob: 0.15
+          prob: 0.085
           amount: 1
         - id: SalvageHumanCorpse
           prob: 0.08
           amount: 1
         - id: MobGiantSpiderAngry
-          prob: 0.05
+          prob: 0.15
           amount: 3
         - id: MobXenoDrone
           prob: 0.01
@@ -114,6 +114,12 @@
           prob: 0.30
         - id: WeaponSubMachineGunVectorRubber
           prob: 0.50
+        - id: MobGiantSpiderAngry
+          prob: 0.25
+          amount: 3
+        - id: MobXenoDrone
+          prob: 0.1
+          amount: 1
 
 - type: entity
   id: InterceptedCrateAnomaly
