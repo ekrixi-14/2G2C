@@ -1,5 +1,4 @@
 using System.Diagnostics.CodeAnalysis;
-using Content.Server.Cuffs.Components;
 using Content.Server.Hands.Components;
 using Content.Server.Pulling;
 using Content.Shared.ActionBlocker;
@@ -269,18 +268,6 @@ namespace Content.Server.Buckle.Components
                 if (EntMan.TryGetComponent<VehicleComponent>(oldBuckledTo.Owner, out var vehicle) &&
                         vehicle.Rider != user)
                     return false;
-
-                if (EntMan.HasComponent<CuffableComponent>(Owner))
-                {
-                    EntMan.TryGetComponent<CuffableComponent>(Owner, out var mobCuffable);
-                    if (mobCuffable != null)
-                    {
-                        if (mobCuffable.CanStillInteract == false)
-                        {
-                            return false;
-                        }
-                    }
-                }
             }
 
             BuckledTo = null;
@@ -369,16 +356,7 @@ namespace Content.Server.Buckle.Components
 
         public override ComponentState GetComponentState()
         {
-            int? drawDepth = null;
-
-            if (BuckledTo != null &&
-                EntMan.GetComponent<TransformComponent>(BuckledTo.Owner).LocalRotation.GetCardinalDir() == Direction.North &&
-                EntMan.TryGetComponent<SpriteComponent>(BuckledTo.Owner, out var spriteComponent))
-            {
-                drawDepth = spriteComponent.DrawDepth - 1;
-            }
-
-            return new BuckleComponentState(Buckled, drawDepth, LastEntityBuckledTo, DontCollide);
+            return new BuckleComponentState(Buckled, LastEntityBuckledTo, DontCollide);
         }
     }
 }
