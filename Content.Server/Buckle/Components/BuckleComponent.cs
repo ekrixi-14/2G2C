@@ -1,11 +1,10 @@
-using System.Diagnostics.CodeAnalysis;
-using Content.Server.Cuffs.Components;
 using Content.Server.Hands.Components;
 using Content.Server.Pulling;
 using Content.Shared.ActionBlocker;
-using Content.Shared.Vehicle.Components;
 using Content.Shared.Alert;
+using Content.Shared.Bed.Sleep;
 using Content.Shared.Buckle.Components;
+using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
 using Content.Shared.MobState.Components;
 using Content.Shared.MobState.EntitySystems;
@@ -13,12 +12,12 @@ using Content.Shared.Popups;
 using Content.Shared.Pulling.Components;
 using Content.Shared.Standing;
 using Content.Shared.Stunnable;
-using Robust.Server.GameObjects;
+using Content.Shared.Vehicle.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
-using Content.Shared.IdentityManagement;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Content.Server.Buckle.Components
 {
@@ -265,22 +264,13 @@ namespace Content.Server.Buckle.Components
                 {
                     return false;
                 }
+
+                if (EntMan.TryGetComponent<SleepingComponent>(Owner, out var sleeping) && Owner == user)
+                    return false;
                 // If the strap is a vehicle and the rider is not the person unbuckling, return.
                 if (EntMan.TryGetComponent<VehicleComponent>(oldBuckledTo.Owner, out var vehicle) &&
                         vehicle.Rider != user)
                     return false;
-
-                if (EntMan.HasComponent<CuffableComponent>(Owner))
-                {
-                    EntMan.TryGetComponent<CuffableComponent>(Owner, out var mobCuffable);
-                    if (mobCuffable != null)
-                    {
-                        if (mobCuffable.CanStillInteract == false)
-                        {
-                            return false;
-                        }
-                    }
-                }
             }
 
             BuckledTo = null;
@@ -369,16 +359,7 @@ namespace Content.Server.Buckle.Components
 
         public override ComponentState GetComponentState()
         {
-            int? drawDepth = null;
-
-            if (BuckledTo != null &&
-                EntMan.GetComponent<TransformComponent>(BuckledTo.Owner).LocalRotation.GetCardinalDir() == Direction.North &&
-                EntMan.TryGetComponent<SpriteComponent>(BuckledTo.Owner, out var spriteComponent))
-            {
-                drawDepth = spriteComponent.DrawDepth - 1;
-            }
-
-            return new BuckleComponentState(Buckled, drawDepth, LastEntityBuckledTo, DontCollide);
+            return new BuckleComponentState(Buckled, LastEntityBuckledTo, DontCollide);
         }
     }
 }
