@@ -87,7 +87,7 @@ namespace Content.Server.Atmos.EntitySystems
         {
             // When an item is moved from hands -> pockets, the container removal briefly dumps the item on the floor.
             // So this is a shitty fix, where the parent check is just delayed. But this really needs to get fixed
-            // properly at some point. 
+            // properly at some point.
             component.CheckUser = true;
         }
 
@@ -268,10 +268,11 @@ namespace Content.Server.Atmos.EntitySystems
 
                 // Let's cap the explosion, yeah?
                 // !1984
-                if (range > GasTankComponent.MaxExplosionRange)
-                {
-                    range = GasTankComponent.MaxExplosionRange;
-                }
+                // GET REVERSE 1984'D SLOTH!!!!!!! -eclipse (2g2c)
+                // if (range > GasTankComponent.MaxExplosionRange)
+                // {
+                //     range = GasTankComponent.MaxExplosionRange;
+                // }
 
                 _explosions.TriggerExplosive(component.Owner, radius: range);
 
