@@ -4,7 +4,7 @@ meta:
   author: Space-Wizards
   postmapinit: false
 tilemap:
-  0: space
+  0: Space
   1: FloorArcadeBlue
   2: FloorArcadeBlue2
   3: FloorArcadeRed
@@ -26,42 +26,42 @@ tilemap:
   19: FloorShuttlePurple
   20: FloorShuttleRed
   21: FloorShuttleWhite
-  22: floor_asteroid_coarse_sand0
-  23: floor_asteroid_coarse_sand1
-  24: floor_asteroid_coarse_sand2
-  25: floor_asteroid_coarse_sand_dug
-  26: floor_asteroid_sand
-  27: floor_asteroid_tile
-  28: floor_bar
-  29: floor_blue
-  30: floor_blue_circuit
-  31: floor_clown
-  32: floor_dark
-  33: floor_elevator_shaft
-  34: floor_freezer
-  35: floor_glass
-  36: floor_gold
-  37: floor_grass
-  38: floor_green_circuit
-  39: floor_hydro
-  40: floor_kitchen
-  41: floor_laundry
-  42: floor_lino
-  43: floor_mime
-  44: floor_mono
-  45: floor_reinforced
-  46: floor_rglass
-  47: floor_rock_vault
-  48: floor_showroom
-  49: floor_silver
-  50: floor_snow
-  51: floor_steel
-  52: floor_steel_dirty
-  53: floor_techmaint
-  54: floor_white
-  55: floor_wood
-  56: lattice
-  57: plating
+  22: FloorAsteroidCoarseSand0
+  23: FloorAsteroidCoarseSand1
+  24: FloorAsteroidCoarseSand2
+  25: FloorAsteroidCoarseSandDug
+  26: FloorAsteroidSand
+  27: FloorAsteroidTile
+  28: FloorBar
+  29: FloorBlue
+  30: FloorBlueCircuit
+  31: FloorClown
+  32: FloorDark
+  33: FloorElevatorShaft
+  34: FloorFreezer
+  35: FloorGlass
+  36: FloorGold
+  37: FloorGrass
+  38: FloorGreenCircuit
+  39: FloorHydro
+  40: FloorKitchen
+  41: FloorLaundry
+  42: FloorLino
+  43: FloorMime
+  44: FloorMono
+  45: FloorReinforced
+  46: FloorRGlass
+  47: FloorRockVault
+  48: FloorShowroom
+  49: FloorSilver
+  50: FloorSnow
+  51: FloorSteel
+  52: FloorSteelDirty
+  53: FloorTechMaint
+  54: FloorWhite
+  55: FloorWood
+  56: Lattice
+  57: Plating
 grids:
 - settings:
     chunksize: 16
@@ -149,22 +149,6 @@ grids:
     tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAADgAAAA4AAAAOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAOAAAADgAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAA4AAAAOAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAOQAAADkAAAA5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAADkAAAAgAAAAIAAAAA==
   - ind: -2,-3
     tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAADgAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAOAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAAAAAAAAAAAA5AAAAOQAAADkAAAA4AAAAAAAAAAAAAAA4AAAAOQAAADkAAAA5AAAAOQAAADkAAAA5AAAAOQAAADkAAAA5AAAAIAAAACAAAAA5AAAAOAAAAAAAAAAAAAAAOAAAADkAAAA5AAAAOQAAADkAAAA1AAAANQAAADUAAAA1AAAANQAAAA==
-- settings:
-    chunksize: 16
-    tilesize: 1
-  chunks: []
-- settings:
-    chunksize: 16
-    tilesize: 1
-  chunks: []
-- settings:
-    chunksize: 16
-    tilesize: 1
-  chunks: []
-- settings:
-    chunksize: 16
-    tilesize: 1
-  chunks: []
 entities:
 - uid: 0
   type: FirelockGlass
@@ -6222,8 +6206,7 @@ entities:
 - uid: 737
   type: SpawnPointChiefMedicalOfficer
   components:
-  - rot: 4.371139006309477E-08 rad
-    pos: 24.5,-14.5
+  - pos: 23.5,-14.5
     parent: 852
     type: Transform
 - uid: 738
@@ -13529,8 +13512,8 @@ entities:
       - 0
       - 0
     type: GridAtmosphere
-  - angularDamping: 100
-    linearDamping: 50
+  - angularDamping: 0.05
+    linearDamping: 0.05
     fixedRotation: False
     bodyType: Dynamic
     type: Physics
@@ -14217,6 +14200,14 @@ entities:
           color: '#FFFFFFFF'
           id: Arrows
           coordinates: 20,17
+        626:
+          color: '#FFFFFFFF'
+          id: Bot
+          coordinates: 30,8
+        627:
+          color: '#FFFFFFFF'
+          id: Bot
+          coordinates: 30,9
       -1,0:
         9:
           color: '#334E6DC8'
@@ -17634,6 +17625,8 @@ entities:
 - uid: 1052
   type: HighSecCommandLocked
   components:
+  - name: Vault
+    type: MetaData
   - pos: 0.5,17.5
     parent: 852
     type: Transform
@@ -19610,33 +19603,19 @@ entities:
       Toggle: []
     type: SignalReceiver
 - uid: 1289
-  type: Poweredlight
+  type: GasPipeStraight
   components:
-  - rot: 3.141592653589793 rad
-    pos: 36.5,8.5
+  - rot: -1.5707963267948966 rad
+    pos: 32.5,8.5
     parent: 852
     type: Transform
-  - powerLoad: 0
-    type: ApcPowerReceiver
-  - inputs:
-      On: []
-      Off: []
-      Toggle: []
-    type: SignalReceiver
 - uid: 1290
-  type: Poweredlight
+  type: GasPipeTJunction
   components:
   - rot: 3.141592653589793 rad
-    pos: 30.5,8.5
+    pos: 31.5,8.5
     parent: 852
     type: Transform
-  - powerLoad: 0
-    type: ApcPowerReceiver
-  - inputs:
-      On: []
-      Off: []
-      Toggle: []
-    type: SignalReceiver
 - uid: 1291
   type: WallSolid
   components:
@@ -44165,6 +44144,12 @@ entities:
     pos: -9.5,22.5
     parent: 852
     type: Transform
+- uid: 4699
+  type: AirlockMedicalGlassLocked
+  components:
+  - pos: 8.5,-10.5
+    parent: 852
+    type: Transform
 - uid: 4700
   type: Carpet
   components:
@@ -44218,13 +44203,11 @@ entities:
       cell_slot: !type:ContainerSlot {}
     type: ContainerContainer
 - uid: 4706
-  type: SupplyIntercepterTelepad
+  type: AirlockMedicalGlassLocked
   components:
-  - pos: -7.5,11.5
+  - pos: 8.5,-8.5
     parent: 852
     type: Transform
-  - canCollide: False
-    type: Physics
 - uid: 4707
   type: SurveillanceCameraCommand
   components:
@@ -44238,13 +44221,12 @@ entities:
     id: Bridge West
     type: SurveillanceCamera
 - uid: 4708
-  type: SupplyIntercepterTelepad
+  type: GasPipeTJunction
   components:
-  - pos: -14.5,4.5
+  - rot: -1.5707963267948966 rad
+    pos: 33.5,8.5
     parent: 852
     type: Transform
-  - canCollide: False
-    type: Physics
 - uid: 4709
   type: PoweredSmallLight
   components:
@@ -44438,9 +44420,9 @@ entities:
     parent: 852
     type: Transform
 - uid: 4735
-  type: AirlockMedicalLocked
+  type: GasPipeBend
   components:
-  - pos: 8.5,-8.5
+  - pos: 31.5,9.5
     parent: 852
     type: Transform
 - uid: 4736
@@ -47414,9 +47396,10 @@ entities:
     parent: 852
     type: Transform
 - uid: 5140
-  type: AirlockMedicalLocked
+  type: GasPort
   components:
-  - pos: 8.5,-10.5
+  - rot: 1.5707963267948966 rad
+    pos: 30.5,8.5
     parent: 852
     type: Transform
 - uid: 5141
@@ -56057,17 +56040,15 @@ entities:
   - color: '#FF1212FF'
     type: AtmosPipeColor
 - uid: 6180
-  type: GasPipeStraight
+  type: AltarToolbox
   components:
-  - pos: 33.5,8.5
+  - pos: -36.5,13.5
     parent: 852
     type: Transform
-  - color: '#FF1212FF'
-    type: AtmosPipeColor
 - uid: 6181
-  type: NitrogenCanister
+  type: OperatingTable
   components:
-  - pos: 30.5,9.5
+  - pos: 18.5,-20.5
     parent: 852
     type: Transform
 - uid: 6182
@@ -58921,11 +58902,13 @@ entities:
   - canCollide: False
     type: Physics
 - uid: 6587
-  type: NitrogenCanister
+  type: HospitalCurtainsOpen
   components:
-  - pos: 30.5,8.5
+  - pos: 8.5,-8.5
     parent: 852
     type: Transform
+  - canCollide: False
+    type: Physics
 - uid: 6588
   type: CableMV
   components:
@@ -62040,8 +62023,8 @@ entities:
   - containers:
       entity_storage: !type:Container
         ents:
-        - 9055
         - 4585
+        - 9055
     type: ContainerContainer
 - uid: 7058
   type: ClosetMaintenanceFilledRandom
@@ -62447,6 +62430,35 @@ entities:
         - 7109
         - 7098
         - 7108
+    type: ContainerContainer
+- uid: 7111
+  type: HospitalCurtainsOpen
+  components:
+  - pos: 8.5,-10.5
+    parent: 852
+    type: Transform
+  - canCollide: False
+    type: Physics
+- uid: 7112
+  type: GasPort
+  components:
+  - rot: 1.5707963267948966 rad
+    pos: 30.5,9.5
+    parent: 852
+    type: Transform
+- uid: 7113
+  type: PortableScrubber
+  components:
+  - pos: 30.5,8.5
+    parent: 852
+    type: Transform
+  - canCollide: False
+    type: Physics
+  - containers:
+      machine_board: !type:Container
+        ents: []
+      machine_parts: !type:Container
+        ents: []
     type: ContainerContainer
 - uid: 7114
   type: Table
@@ -66798,12 +66810,19 @@ entities:
     parent: 852
     type: Transform
 - uid: 7706
-  type: ChairWood
+  type: PortableScrubber
   components:
-  - rot: 3.141592653589793 rad
-    pos: -36.5,13.5
+  - pos: 30.5,9.5
     parent: 852
     type: Transform
+  - canCollide: False
+    type: Physics
+  - containers:
+      machine_board: !type:Container
+        ents: []
+      machine_parts: !type:Container
+        ents: []
+    type: ContainerContainer
 - uid: 7707
   type: ChairWood
   components:
@@ -71352,25 +71371,6 @@ entities:
   - pos: 38.5,26.5
     parent: 852
     type: Transform
-- uid: 8370
-  components:
-  - pos: -4.0828176,-36.69003
-    parent: 658
-    type: Transform
-  - index: 1
-    type: MapGrid
-  - angularDamping: 100
-    linearDamping: 50
-    fixedRotation: False
-    bodyType: Dynamic
-    type: Physics
-  - fixtures: []
-    type: Fixtures
-  - gravityShakeSound: !type:SoundPathSpecifier
-      path: /Audio/Effects/alert.ogg
-    type: Gravity
-  - chunkCollection: {}
-    type: DecalGrid
 - uid: 8371
   type: Grille
   components:
@@ -71389,25 +71389,6 @@ entities:
   - pos: 1.5,-38.5
     parent: 852
     type: Transform
-- uid: 8374
-  components:
-  - pos: 16.442314,-37.900513
-    parent: 658
-    type: Transform
-  - index: 2
-    type: MapGrid
-  - angularDamping: 100
-    linearDamping: 50
-    fixedRotation: False
-    bodyType: Dynamic
-    type: Physics
-  - fixtures: []
-    type: Fixtures
-  - gravityShakeSound: !type:SoundPathSpecifier
-      path: /Audio/Effects/alert.ogg
-    type: Gravity
-  - chunkCollection: {}
-    type: DecalGrid
 - uid: 8375
   type: GrilleBroken
   components:
@@ -71449,44 +71430,6 @@ entities:
     pos: 31.5,-38.5
     parent: 852
     type: Transform
-- uid: 8381
-  components:
-  - pos: 38.86631,-37.97411
-    parent: 658
-    type: Transform
-  - index: 3
-    type: MapGrid
-  - angularDamping: 100
-    linearDamping: 50
-    fixedRotation: False
-    bodyType: Dynamic
-    type: Physics
-  - fixtures: []
-    type: Fixtures
-  - gravityShakeSound: !type:SoundPathSpecifier
-      path: /Audio/Effects/alert.ogg
-    type: Gravity
-  - chunkCollection: {}
-    type: DecalGrid
-- uid: 8382
-  components:
-  - pos: 44.788185,-37.833485
-    parent: 658
-    type: Transform
-  - index: 4
-    type: MapGrid
-  - angularDamping: 100
-    linearDamping: 50
-    fixedRotation: False
-    bodyType: Dynamic
-    type: Physics
-  - fixtures: []
-    type: Fixtures
-  - gravityShakeSound: !type:SoundPathSpecifier
-      path: /Audio/Effects/alert.ogg
-    type: Gravity
-  - chunkCollection: {}
-    type: DecalGrid
 - uid: 8383
   type: GrilleBroken
   components:
@@ -73847,7 +73790,7 @@ entities:
     parent: 852
     type: Transform
 - uid: 8740
-  type: RedOxygenTankFilled
+  type: OxygenTankFilled
   components:
   - pos: -32.388412,-27.529545
     parent: 852
@@ -76591,11 +76534,13 @@ entities:
     parent: 852
     type: Transform
 - uid: 9093
-  type: StasisBed
+  type: BrbSign
   components:
-  - pos: 18.5,-20.5
+  - pos: 8.736744,18.337376
     parent: 852
     type: Transform
+  - canCollide: False
+    type: Physics
 - uid: 9094
   type: Poweredlight
   components:
@@ -79727,307 +79672,4 @@ entities:
       board: !type:Container
         ents: []
     type: ContainerContainer
-- uid: 9513
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: -7.5,0.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9514
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: -24.5,4.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9515
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: -38.5,9.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9516
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: -35.5,3.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9517
-  type: InterceptedCrateSupply
-  components:
-  - pos: -38.5,3.5
-    parent: 852
-    type: Transform
-  - containers:
-    - EntityStorageComponent
-    type: Construction
-  - isPlaceable: False
-    type: PlaceableSurface
-- uid: 9518
-  type: InterceptedCrateSupply
-  components:
-  - pos: -37.5,3.5
-    parent: 852
-    type: Transform
-  - containers:
-    - EntityStorageComponent
-    type: Construction
-  - isPlaceable: False
-    type: PlaceableSurface
-- uid: 9519
-  type: InterceptedCrateSupply
-  components:
-  - pos: -37.5,2.5
-    parent: 852
-    type: Transform
-  - containers:
-    - EntityStorageComponent
-    type: Construction
-  - isPlaceable: False
-    type: PlaceableSurface
-- uid: 9520
-  type: InterceptedCrateSupply
-  components:
-  - pos: -38.5,2.5
-    parent: 852
-    type: Transform
-  - containers:
-    - EntityStorageComponent
-    type: Construction
-  - isPlaceable: False
-    type: PlaceableSurface
-- uid: 9521
-  type: InterceptedCrateSupply
-  components:
-  - pos: -6.5,11.5
-    parent: 852
-    type: Transform
-  - containers:
-    - EntityStorageComponent
-    type: Construction
-  - isPlaceable: False
-    type: PlaceableSurface
-- uid: 9522
-  type: InterceptedCrateSupply
-  components:
-  - pos: -5.5,11.5
-    parent: 852
-    type: Transform
-  - containers:
-    - EntityStorageComponent
-    type: Construction
-  - isPlaceable: False
-    type: PlaceableSurface
-- uid: 9523
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 20.5,11.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9524
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 22.5,11.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9525
-  type: InterceptedCrateSupply
-  components:
-  - pos: 21.5,11.5
-    parent: 852
-    type: Transform
-  - containers:
-    - EntityStorageComponent
-    type: Construction
-  - isPlaceable: False
-    type: PlaceableSurface
-- uid: 9526
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 33.5,4.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9527
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 47.5,3.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9528
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 44.5,1.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9529
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 43.5,8.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9530
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 22.5,-0.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9531
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 45.5,-24.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9532
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 53.5,-24.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9533
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 49.5,-20.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9534
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 49.5,-28.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9535
-  type: InterceptedCrateSupply
-  components:
-  - pos: 2.5,4.5
-    parent: 852
-    type: Transform
-  - containers:
-    - EntityStorageComponent
-    type: Construction
-  - isPlaceable: False
-    type: PlaceableSurface
-- uid: 9536
-  type: InterceptedCrateSupply
-  components:
-  - pos: 4.5,3.5
-    parent: 852
-    type: Transform
-  - containers:
-    - EntityStorageComponent
-    type: Construction
-  - isPlaceable: False
-    type: PlaceableSurface
-- uid: 9537
-  type: InterceptedCrateSupply
-  components:
-  - pos: 4.5,3.5
-    parent: 852
-    type: Transform
-  - containers:
-    - EntityStorageComponent
-    type: Construction
-  - isPlaceable: False
-    type: PlaceableSurface
-- uid: 9538
-  type: InterceptedCrateSupply
-  components:
-  - pos: 4.5,5.5
-    parent: 852
-    type: Transform
-  - containers:
-    - EntityStorageComponent
-    type: Construction
-  - isPlaceable: False
-    type: PlaceableSurface
-- uid: 9539
-  type: SupplyIntercepterTelepad
-  components:
-  - pos: 3.5,4.5
-    parent: 852
-    type: Transform
-  - canCollide: False
-    type: Physics
-- uid: 9540
-  type: CableHV
-  components:
-  - pos: 49.5,0.5
-    parent: 852
-    type: Transform
-- uid: 9541
-  type: CableHV
-  components:
-  - pos: 49.5,-0.5
-    parent: 852
-    type: Transform
-- uid: 9542
-  type: CableHV
-  components:
-  - pos: 49.5,-1.5
-    parent: 852
-    type: Transform
-- uid: 9543
-  type: CableHV
-  components:
-  - pos: 49.5,-2.5
-    parent: 852
-    type: Transform
-- uid: 9544
-  type: CableHV
-  components:
-  - pos: 49.5,-3.5
-    parent: 852
-    type: Transform
-- uid: 9545
-  type: CableHV
-  components:
-  - pos: 49.5,-4.5
-    parent: 852
-    type: Transform
-- uid: 9546
-  type: GeneratorGreynium
-  components:
-  - pos: 49.5,-6.5
-    parent: 852
-    type: Transform
-- uid: 9547
-  type: CableHV
-  components:
-  - pos: 49.5,-6.5
-    parent: 852
-    type: Transform
-- uid: 9548
-  type: CableHV
-  components:
-  - pos: 49.5,-5.5
-    parent: 852
-    type: Transform
 ...

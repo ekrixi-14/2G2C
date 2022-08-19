@@ -1,0 +1,11 @@
+- type: gamePreset
+  id: Chaos
+  alias:
+    - chaos
+    - wtf
+  name: chaos-title
+  showInVote: true
+  description: chaos-description
+  rules:
+    - Chaos
+    - BasicStationEventScheduler

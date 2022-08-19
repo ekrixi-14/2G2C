@@ -131,14 +131,14 @@ namespace Content.Server.Ghost
 
         private void SpawnBluespaceReincarnation(IPlayerSession session, TransformComponent transformComponent, TimeSpan TimeOfDeath, bool checkMinimumTime = false)
         {
-            var time = 180;
+            var time = 60;
 
             if (checkMinimumTime)
             {
                 var timeSinceDeath = _gameTiming.RealTime.Subtract(TimeOfDeath);
                 if (timeSinceDeath.TotalSeconds < time)
                 {
-                    _popupSystem.PopupCursor(Loc.GetString("ghost-respawn-cooldown-message", ("time", Math.Round(timeSinceDeath.TotalSeconds - time * -1))), Filter.Empty().AddPlayer(session), PopupType.MediumCaution);
+                    _popupSystem.PopupCursor(Loc.GetString("ghost-respawn-cooldown-message", ("time", Math.Floor(time - timeSinceDeath.TotalSeconds))), Filter.Empty().AddPlayer(session), PopupType.MediumCaution);
                     return;
                 }
             }
@@ -166,10 +166,9 @@ namespace Content.Server.Ghost
             var booCounter = 0;
             foreach (var ent in ents)
             {
-                var ghostBoo = new GhostBooEvent();
-                RaiseLocalEvent(ent, ghostBoo, true);
+                var handled = DoGhostBooEvent(ent);
 
-                if (ghostBoo.Handled)
+                if (handled)
                     booCounter++;
 
                 if (booCounter >= component.BooMaxTargets)
@@ -374,6 +373,14 @@ namespace Content.Server.Ghost
         public void OnEntityStorageInsertAttempt(EntityUid uid, GhostComponent comp, InsertIntoEntityStorageAttemptEvent args)
         {
             args.Cancel();
+        }
+
+        public bool DoGhostBooEvent(EntityUid target)
+        {
+            var ghostBoo = new GhostBooEvent();
+            RaiseLocalEvent(target, ghostBoo, true);
+
+            return ghostBoo.Handled;
         }
     }
 }
