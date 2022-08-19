@@ -1142,6 +1142,13 @@ namespace Content.Shared.CCVar
             CVarDef.Create("ghost.role_time", 3f, CVar.REPLICATED);
 
         /*
+         * CHAOS
+         */
+
+        public static readonly CVarDef<int> ChaosMinPlayers =
+            CVarDef.Create("chaos.min_players", 5);
+
+        /*
          * PLAYTIME
          */
 

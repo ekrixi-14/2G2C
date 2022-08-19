@@ -1,0 +1,5 @@
+﻿- type: gameRule
+  id: Chaos
+  config:
+    !type:GenericGameRuleConfiguration
+    id: Chaos
