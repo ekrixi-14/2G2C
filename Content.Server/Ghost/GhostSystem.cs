@@ -131,14 +131,14 @@ namespace Content.Server.Ghost
 
         private void SpawnBluespaceReincarnation(IPlayerSession session, TransformComponent transformComponent, TimeSpan TimeOfDeath, bool checkMinimumTime = false)
         {
-            var time = 180;
+            var time = 60;
 
             if (checkMinimumTime)
             {
                 var timeSinceDeath = _gameTiming.RealTime.Subtract(TimeOfDeath);
                 if (timeSinceDeath.TotalSeconds < time)
                 {
-                    _popupSystem.PopupCursor(Loc.GetString("ghost-respawn-cooldown-message", ("time", Math.Round(timeSinceDeath.TotalSeconds - time * -1))), Filter.Empty().AddPlayer(session), PopupType.MediumCaution);
+                    _popupSystem.PopupCursor(Loc.GetString("ghost-respawn-cooldown-message", ("time", Math.Floor(time - timeSinceDeath.TotalSeconds))), Filter.Empty().AddPlayer(session), PopupType.MediumCaution);
                     return;
                 }
             }
